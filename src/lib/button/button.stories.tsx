@@ -13,5 +13,5 @@ const Template: Story<typeof Button> = (args: ButtonProps) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  children: "Toast",
+  children: "Primary button",
 };
