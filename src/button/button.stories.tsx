@@ -3,7 +3,7 @@ import { Button } from "./button";
 import type { Meta, Story } from "@storybook/preact";
 
 export default {
-  title: "Design System/MyButton",
+  title: "Components/Button",
   component: Button,
 } as Meta<typeof Button>;
 
