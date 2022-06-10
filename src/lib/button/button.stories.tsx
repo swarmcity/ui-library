@@ -1,5 +1,5 @@
 import { h } from "preact";
-import { Button, ButtonProps } from "./button";
+import { Button } from "./button";
 import type { Meta, Story } from "@storybook/preact";
 
 export default {
@@ -7,9 +7,7 @@ export default {
   component: Button,
 } as Meta<typeof Button>;
 
-const Template: Story<typeof Button> = (args: ButtonProps) => (
-  <Button {...args} />
-);
+const Template: Story<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
