@@ -13,7 +13,7 @@ export default defineConfig({
   build: {
     sourcemap: true,
     lib: {
-      entry: path.resolve(__dirname, "src/lib/index.ts"),
+      entry: path.resolve(__dirname, "src/index.ts"),
       name: "Swarm City UI Library",
       formats: ["es", "umd"],
       fileName: (format) => `ui-library.${format}.js`,
