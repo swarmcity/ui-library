@@ -37,6 +37,7 @@
     }
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "preact": "10.x"
   },
   "peerDependencies": {

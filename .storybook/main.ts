@@ -2,7 +2,7 @@ import type { StorybookViteConfig } from "@storybook/builder-vite";
 
 const config: StorybookViteConfig = {
   framework: "@storybook/preact",
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../src/**/*.stories.@(ts|tsx)"],
   addons: [
     "@storybook/addon-a11y",
     "@storybook/addon-links",
