@@ -1,43 +1,63 @@
 button {
-	background: #fafafa;
-	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-	border-radius: 2px;
-	padding: 18px;
-	font-size: 12px;
-	line-height: 15px;
-	font-weight: 700;
-	text-align: center;
-	color: #24b1ff;
-	border: 0;
+  background: #fafafa;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  padding: 18px 24px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-align: center;
+  color: #24b1ff;
+  border: 0;
+  min-width: 169px;
+  pointer-events: all;
+  cursor: pointer;
 
-	&.primary {
-		background: #24b1ff;
-	}
+  &.bgLight {
+    background: #fafafa;
+  }
 
-	&.large {
-		padding: 30px;
-		font-size: 18px;
-		line-height: 22px;
-	}
+  &.bgDanger {
+    background: #f77878;
+  }
 
-	&.black {
-		color: #333333;
-	}
+  &.bgSuccess {
+    background: #87dea7;
+  }
 
-	&.green {
-		color: #23b460;
-	}
+  &.bgPrimary {
+    background: #4fc0fd;
+  }
 
-	&.red {
-		color: #d0021b;
-	}
+  &.primary {
+    color: #24b1ff;
+  }
 
-	&.white {
-		color: #fff;
-	}
+  &.dark {
+    color: #333333;
+  }
 
-	&.disabled {
-		background: #f2f2f2;
-		color: #cccccc;
-	}
+  &.success {
+    color: #23b460;
+  }
+
+  &.danger {
+    color: #d0021b;
+  }
+
+  &.light {
+    color: #fff;
+  }
+
+  &.disabled {
+    background: #f2f2f2;
+    color: #cccccc;
+  }
+
+  &.large {
+    padding: 30px;
+    font-size: 18px;
+    line-height: 22px;
+    min-width: 272px;
+  }
 }
