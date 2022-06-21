@@ -37,12 +37,12 @@ button {
     color: #333333;
   }
 
-  &.success {
-    color: #23b460;
-  }
-
   &.danger {
     color: #d0021b;
+  }
+
+  &.success {
+    color: #23b460;
   }
 
   &.light {

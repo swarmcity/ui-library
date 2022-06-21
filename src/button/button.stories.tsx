@@ -1,6 +1,6 @@
-import { h } from 'preact'
-import { Button } from './button'
-import type { Meta, Story } from '@storybook/preact'
+import { h } from "preact";
+import { Button } from "./button";
+import type { Meta, Story } from "@storybook/preact";
 
 export default {
 	title: "Components/Button",
