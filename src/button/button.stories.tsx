@@ -77,3 +77,9 @@ Danger.args = {
 	bgColor: "danger",
 	color: "light",
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	children: "Disabled button",
+	disabled: true,
+};

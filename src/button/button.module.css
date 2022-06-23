@@ -52,6 +52,7 @@ button {
   &.disabled {
     background: #f2f2f2;
     color: #cccccc;
+    pointer-events: none;
   }
 
   &.large {
