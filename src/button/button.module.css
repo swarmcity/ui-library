@@ -7,51 +7,44 @@ button {
   line-height: 15px;
   font-weight: 700;
   text-align: center;
-  color: #24b1ff;
+  color: #333;
   border: 0;
   min-width: 169px;
   pointer-events: all;
   cursor: pointer;
 
-  &.bgLight {
-    background: #fafafa;
-  }
-
-  &.bgDanger {
-    background: #f77878;
-  }
-
-  &.bgSuccess {
-    background: #87dea7;
-  }
-
-  &.bgPrimary {
-    background: #4fc0fd;
-  }
-
-  &.primary {
+  &.info {
     color: #24b1ff;
-  }
-
-  &.dark {
-    color: #333333;
+    &.bg {
+      background: #24b1ff;
+    }
   }
 
   &.danger {
     color: #d0021b;
+    &.bg {
+      background: #d0021b;
+    }
   }
 
-  &.success {
-    color: #23b460;
+  &.progress {
+    color: #7ad69c;
+    &.bg {
+      background: #7ad69c;
+    }
   }
 
-  &.light {
-    color: #fff;
+  &.bg {
+    &.info,
+    &.danger,
+    &.progress {
+      color: #fafafa;
+    }
   }
 
   &.disabled {
-    background: #f2f2f2;
-    color: #cccccc;
+    background: #f2f2f2 !important;
+    color: #cccccc !important;
     pointer-events: none;
   }
 

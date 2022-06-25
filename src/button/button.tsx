@@ -1,34 +1,28 @@
-import { h } from 'preact'
-import cn from 'classnames'
-import classes from './button.module.css'
+import { h } from "preact";
+import cn from "classnames";
+import classes from "./button.module.css";
 
-const BGCOLORS = {
-	danger: classes.bgDanger,
-	success: classes.bgSuccess,
-	primary: classes.bgPrimary,
-	light: classes.bgLight,
-}
-
-const COLORS = {
+const VARIANTS = {
 	danger: classes.danger,
-	success: classes.success,
-	dark: classes.dark,
-	light: classes.light,
-}
+	progress: classes.progress,
+	default: classes.default,
+	info: classes.info,
+};
 
 const SIZE = {
 	large: classes.large,
 }
 
 export type ButtonProps = h.JSX.HTMLAttributes<HTMLButtonElement> & {
-	bgColor?: keyof typeof BGCOLORS
-	color?: keyof typeof COLORS
-	size?: keyof typeof SIZE
-}
+	variant?: keyof typeof VARIANTS;
+	bg?: boolean;
+	size?: keyof typeof SIZE;
+	disabled?: boolean;
+};
 
 export const Button = ({
-	bgColor,
-	color,
+	variant,
+	bg,
 	size,
 	disabled,
 	class: className,
@@ -37,12 +31,12 @@ export const Button = ({
 	<button
 		class={cn(
 			classes.div,
-			bgColor && BGCOLORS[bgColor],
-			color && COLORS[color],
+			variant && VARIANTS[variant],
+			bg && classes.bg,
 			size && SIZE[size],
 			disabled && classes.disabled,
 			className
 		)}
 		{...props}
 	/>
-)
+);
