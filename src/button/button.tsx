@@ -4,9 +4,9 @@ import classes from "./button.module.css";
 
 const VARIANTS = {
 	danger: classes.danger,
-	progress: classes.progress,
+	deal: classes.deal,
 	default: classes.default,
-	info: classes.info,
+	action: classes.action,
 };
 
 const SIZE = {

@@ -12,7 +12,7 @@ export default {
 		},
 		variant: {
 			control: "select",
-			options: ["default", "info", "danger", "progress"],
+			options: ["default", "action", "danger", "deal"],
 			default: "default",
 		},
 		size: {

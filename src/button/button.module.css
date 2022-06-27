@@ -13,7 +13,7 @@ button {
   pointer-events: all;
   cursor: pointer;
 
-  &.info {
+  &.action {
     color: #24b1ff;
     &.bg {
       background: #24b1ff;
@@ -27,7 +27,7 @@ button {
     }
   }
 
-  &.progress {
+  &.deal {
     color: #7ad69c;
     &.bg {
       background: #7ad69c;
@@ -35,9 +35,9 @@ button {
   }
 
   &.bg {
-    &.info,
+    &.action,
     &.danger,
-    &.progress {
+    &.deal {
       color: #fafafa;
     }
   }
