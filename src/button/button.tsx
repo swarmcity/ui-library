@@ -2,11 +2,11 @@ import { h } from 'preact'
 import cn from 'classnames'
 import classes from './button.module.css'
 
-const COLORS = {
-	red: classes.red,
-	green: classes.green,
-	black: classes.black,
-	white: classes.white,
+const VARIANTS = {
+	danger: classes.danger,
+	deal: classes.deal,
+	default: classes.default,
+	action: classes.action,
 }
 
 const SIZE = {
@@ -14,12 +14,15 @@ const SIZE = {
 }
 
 export type ButtonProps = h.JSX.HTMLAttributes<HTMLButtonElement> & {
-	color?: keyof typeof COLORS
+	variant?: keyof typeof VARIANTS
+	bg?: boolean
 	size?: keyof typeof SIZE
+	disabled?: boolean
 }
 
 export const Button = ({
-	color,
+	variant,
+	bg,
 	size,
 	disabled,
 	class: className,
@@ -28,7 +31,8 @@ export const Button = ({
 	<button
 		class={cn(
 			classes.div,
-			color && COLORS[color],
+			variant && VARIANTS[variant],
+			bg && classes.bg,
 			size && SIZE[size],
 			disabled && classes.disabled,
 			className

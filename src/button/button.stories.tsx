@@ -6,9 +6,13 @@ export default {
 	title: 'Components/Button',
 	component: Button,
 	argTypes: {
-		color: {
+		bg: {
+			control: 'boolean',
+			default: false,
+		},
+		variant: {
 			control: 'select',
-			options: ['default', 'red', 'green', 'black', 'white'],
+			options: ['default', 'action', 'danger', 'deal'],
 			default: 'default',
 		},
 		size: {
@@ -25,7 +29,7 @@ export default {
 
 const Template: Story<typeof Button> = (args) => <Button {...args} />
 
-export const Primary = Template.bind({})
-Primary.args = {
-	children: 'Primary button',
+export const Default = Template.bind({})
+Default.args = {
+	children: 'Default Button',
 }
