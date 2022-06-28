@@ -1,57 +1,57 @@
 button {
-  background: #fafafa;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  padding: 18px 24px;
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 700;
-  text-align: center;
-  color: #333;
-  border: 0;
-  min-width: 169px;
-  pointer-events: all;
-  cursor: pointer;
+	background: #fafafa;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+	padding: 18px 24px;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 700;
+	text-align: center;
+	color: #333;
+	border: 0;
+	min-width: 169px;
+	pointer-events: all;
+	cursor: pointer;
 
-  &.action {
-    color: #24b1ff;
-    &.bg {
-      background: #24b1ff;
-    }
-  }
+	&.action {
+		color: #24b1ff;
+		&.bg {
+			background: #24b1ff;
+		}
+	}
 
-  &.danger {
-    color: #d0021b;
-    &.bg {
-      background: #d0021b;
-    }
-  }
+	&.danger {
+		color: #d0021b;
+		&.bg {
+			background: #d0021b;
+		}
+	}
 
-  &.deal {
-    color: #7ad69c;
-    &.bg {
-      background: #7ad69c;
-    }
-  }
+	&.deal {
+		color: #7ad69c;
+		&.bg {
+			background: #7ad69c;
+		}
+	}
 
-  &.bg {
-    &.action,
-    &.danger,
-    &.deal {
-      color: #fafafa;
-    }
-  }
+	&.bg {
+		&.action,
+		&.danger,
+		&.deal {
+			color: #fafafa;
+		}
+	}
 
-  &.disabled {
-    background: #f2f2f2 !important;
-    color: #cccccc !important;
-    pointer-events: none;
-  }
+	&.disabled {
+		background: #f2f2f2 !important;
+		color: #cccccc !important;
+		pointer-events: none;
+	}
 
-  &.large {
-    padding: 30px;
-    font-size: 18px;
-    line-height: 22px;
-    min-width: 272px;
-  }
+	&.large {
+		padding: 30px;
+		font-size: 18px;
+		line-height: 22px;
+		min-width: 272px;
+	}
 }

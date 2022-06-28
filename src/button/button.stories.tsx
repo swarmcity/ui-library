@@ -1,35 +1,35 @@
-import { h } from "preact";
-import { Button } from "./button";
-import type { Meta, Story } from "@storybook/preact";
+import { h } from 'preact'
+import { Button } from './button'
+import type { Meta, Story } from '@storybook/preact'
 
 export default {
-	title: "Components/Button",
+	title: 'Components/Button',
 	component: Button,
 	argTypes: {
 		bg: {
-			control: "boolean",
+			control: 'boolean',
 			default: false,
 		},
 		variant: {
-			control: "select",
-			options: ["default", "action", "danger", "deal"],
-			default: "default",
+			control: 'select',
+			options: ['default', 'action', 'danger', 'deal'],
+			default: 'default',
 		},
 		size: {
-			control: "radio",
-			options: ["default", "large"],
-			default: "default",
+			control: 'radio',
+			options: ['default', 'large'],
+			default: 'default',
 		},
 		disabled: {
-			control: "boolean",
+			control: 'boolean',
 			default: false,
 		},
 	},
-} as Meta<typeof Button>;
+} as Meta<typeof Button>
 
 const Template: Story<typeof Button> = (args) => <Button {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
-	children: "Default Button",
-};
+	children: 'Default Button',
+}
