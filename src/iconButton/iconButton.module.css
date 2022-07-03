@@ -1,0 +1,225 @@
+button.icon {
+	position: relative;
+	display: inline-block;
+	border: none;
+	background-color: transparent;
+	box-shadow: none;
+	padding: 0;
+	line-height: 0;
+	pointer-events: all;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 50%;
+
+	/* &.contained {
+		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+	} */
+
+	&::before {
+		position: absolute;
+		content: '';
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 36px;
+		width: 100%;
+		height: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
+
+	&.disabled {
+		pointer-events: none;
+		&::before {
+			opacity: 0.2;
+		}
+	}
+
+	&.close::before {
+		background-image: url('./images/icon_close_grey3.png');
+	}
+
+	&.cancelCreation::before {
+		background-image: url('./images/icon_cancel_bg.png');
+	}
+
+	&.cancel::before {
+		background-image: url('./images/icon_cancel.png');
+		background-size: 50px;
+	}
+
+	&.rotateImg::before {
+		background-image: url('./images/icon_imgRotate.png');
+	}
+
+	&.exit::before {
+		background-image: url('./images/icon_logout.png');
+		@media (min-width: 992px) {
+			background-size: 50px;
+		}
+	}
+
+	&.back::before {
+		background-image: url('./images/icon_back.png');
+		@media (min-width: 992px) {
+			background-size: 50px;
+		}
+	}
+
+	&.select::before {
+		background-image: url('./images/icon_next_mktplc.png');
+	}
+
+	&.conflictNext,
+	&.requestNext,
+	&.errorNext,
+	&.confirmAction,
+	&.confirmDanger {
+		width: 72px;
+		height: 72px;
+		&::before {
+			background-size: 56px;
+		}
+	}
+
+	&.conflictNext,
+	&.requestNext,
+	&.errorNext,
+	&.chat,
+	&.reply,
+	&.requestStart,
+	&.confirmAction,
+	&.confirmDanger,
+	&.confirmSend,
+	&.upload,
+	&.badge {
+		background-color: #fafafa;
+		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	&.conflictNext::before {
+		background-image: url('./images/icon_next_action.png');
+	}
+
+	&.requestNext {
+		background-color: #24b1ff;
+		&::before {
+			background-image: url('./images/icon_next_bg.png');
+		}
+	}
+
+	&.errorNext::before {
+		background-image: url('./images/icon_next_danger.png');
+	}
+
+	&.confirmAction::before {
+		background-image: url('./images/icon_confirm_action.png');
+	}
+
+	&.confirmDanger::before {
+		background-image: url('./images/icon_confirm_danger.png');
+	}
+
+	&.confirmSend {
+		width: 50px;
+		height: 50px;
+		&::before {
+			background-image: url('./images/icon_confirm_send.png');
+			background-size: 38px;
+		}
+	}
+
+	&.collapse {
+		transform: rotate(270deg);
+		transition: transform 0.3s;
+		&.open {
+			transform: rotate(90deg);
+		}
+		&::before {
+			background-image: url('./images/icon_next_action.png');
+		}
+	}
+
+	&.requestStart {
+		&::before {
+			background-image: url('./images/icon_new.png');
+		}
+	}
+
+	&.reply::before {
+		background-image: url('./images/icon_reply.png');
+	}
+
+	&.chat::before {
+		background-image: url('./images/icon_chat.png');
+	}
+
+	&.requestStart,
+	&.reply,
+	&.chat {
+		width: 80px;
+		height: 80px;
+		&::before {
+			background-size: 62px 62px;
+		}
+	}
+
+	&.upload {
+		background-color: #191919;
+		width: 30px;
+		height: 30px;
+		&::before {
+			background-image: url('./images/icon_upload_bg.png');
+			background-size: 23px;
+		}
+	}
+
+	/* =================== */
+
+	/* &.action {
+		background: #24b1ff;
+	}
+
+	&.danger {
+		background: #d0021b;
+	}
+
+	&.deal {
+		background: #7ad69c;
+	}
+
+	&.disabled {
+		background: #f2f2f2 !important;
+		color: #cccccc !important;
+		pointer-events: none;
+	}
+
+	&.xs {
+		width: 30px;
+		height: 30px;
+	}
+
+	&.sm {
+		width: 36px;
+		height: 36px;
+	}
+
+	&.md {
+		width: 50px;
+		height: 50px;
+	}
+
+	&.lg {
+		width: 70px;
+		height: 70px;
+	}
+
+	&.xl {
+		width: 80px;
+		height: 80px;
+	} */
+}
