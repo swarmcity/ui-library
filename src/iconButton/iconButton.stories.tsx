@@ -6,30 +6,19 @@ export default {
 	title: 'Components/IconButton',
 	component: IconButton,
 	argTypes: {
-		action: {
+		variant: {
+			name: 'Variant',
 			control: 'select',
 			options: ['close', 'cancelCreation', 'cancel', 'reply', 'rotateImg', 'exit', 'back', 'collapse', 'select', 'conflictNext', 'requestNext', 'errorNext', 'chat', 'requestStart', 'confirmAction', 'confirmDanger', 'confirmSend', 'upload'],
 			default: 'close',
 		},
-		// variant: {
-		// 	control: 'select',
-		// 	options: ['default', 'action', 'danger', 'deal'],
-		// 	default: 'default',
-		// },
-		// size: {
-		// 	control: 'select',
-		// 	options: ['xs', 'sm', 'md', 'lg', 'xl'],
-		// 	default: 'md',
-		// },
-		// contained: {
-		// 	control: 'boolean',
-		// 	default: false,
-		// },
 		disabled: {
+			name: 'Disable',
 			control: 'boolean',
 			default: false,
 		},
 		open: {
+			name: 'Toggle Collapse',
 			control: 'boolean',
 			default: false,
 		},
@@ -39,6 +28,3 @@ export default {
 const Template: Story<typeof IconButton> = (args) => <IconButton {...args} />
 
 export const Default = Template.bind({})
-// Default.args = {
-// 	children: '',
-// }

@@ -2,7 +2,7 @@ import { h } from 'preact'
 import cn from 'classnames'
 import classes from './iconButton.module.css'
 
-const ACTIONS = {
+const VARIANTS = {
 	cancelCreation: classes.cancelCreation,
 	close: classes.close,
 	cancel: classes.cancel,
@@ -23,31 +23,14 @@ const ACTIONS = {
 	upload: classes.upload,
 }
 
-// const VARIANTS = {
-// 	danger: classes.danger,
-// 	deal: classes.deal,
-// 	default: classes.default,
-// 	action: classes.action,
-// }
-
-// const SIZE = {
-// 	large: classes.large,
-// }
-
 export type ButtonProps = h.JSX.HTMLAttributes<HTMLButtonElement> & {
-	action?: keyof typeof ACTIONS
-	// variant?: keyof typeof VARIANTS
-	// bg?: boolean
-	// size?: keyof typeof SIZE
+	variant?: keyof typeof VARIANTS
 	disabled?: boolean
 	open?: boolean
 }
 
 export const IconButton = ({
-	action,
-	// variant,
-	// bg,
-	// size,
+	variant,
 	open,
 	disabled,
 	class: className,
@@ -56,11 +39,8 @@ export const IconButton = ({
 	<button
 		class={cn(
 			classes.icon,
-			classes.div,
-			action && ACTIONS[action],
-			// variant && VARIANTS[variant],
-			// bg && classes.bg,
-			// size && SIZE[size],
+			// classes.div,
+			variant && VARIANTS[variant],
 			open && classes.open,
 			disabled && classes.disabled,
 			className

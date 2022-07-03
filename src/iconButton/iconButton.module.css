@@ -13,10 +13,6 @@ button.icon {
 	overflow: hidden;
 	border-radius: 50%;
 
-	/* &.contained {
-		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-	} */
-
 	&::before {
 		position: absolute;
 		content: '';
@@ -177,49 +173,4 @@ button.icon {
 			background-size: 23px;
 		}
 	}
-
-	/* =================== */
-
-	/* &.action {
-		background: #24b1ff;
-	}
-
-	&.danger {
-		background: #d0021b;
-	}
-
-	&.deal {
-		background: #7ad69c;
-	}
-
-	&.disabled {
-		background: #f2f2f2 !important;
-		color: #cccccc !important;
-		pointer-events: none;
-	}
-
-	&.xs {
-		width: 30px;
-		height: 30px;
-	}
-
-	&.sm {
-		width: 36px;
-		height: 36px;
-	}
-
-	&.md {
-		width: 50px;
-		height: 50px;
-	}
-
-	&.lg {
-		width: 70px;
-		height: 70px;
-	}
-
-	&.xl {
-		width: 80px;
-		height: 80px;
-	} */
 }
