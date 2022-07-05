@@ -30,7 +30,7 @@ export const Button = ({
 }: ButtonProps) => (
 	<button
 		class={cn(
-			classes.div,
+			classes.button,
 			variant && VARIANTS[variant],
 			bg && classes.bg,
 			size && SIZE[size],
