@@ -1,0 +1,66 @@
+:root {
+	--action: #24b1ff;
+	--yellow: #efd96f;
+	--danger: #f55858;
+	--deal: #7ad69c;
+	--error: #d0021b;
+
+	// SC variables
+
+	--default: #fafafa;
+	--grey1: #f2f2f2;
+	--grey2: #bfbfbf;
+	--grey3: #666666;
+	--grey4: rgb(51, 51, 51);
+	--grey5: #191919;
+}
+
+body {
+	margin: 0;
+	background-color: var(--white);
+	min-height: 100vh;
+	display: flex;
+	align-content: center;
+	justify-content: flex-start;
+	align-items: stretch;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+#app {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	> div {
+		min-height: 100vh;
+	}
+}
+
+.container {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 32px;
+	padding-left: 32px;
+	@media screen and (min-width: 576px) {
+		max-width: 540px;
+	}
+	@media screen and (min-width: 768px) {
+		max-width: 720px;
+	}
+	@media screen and (min-width: 992px) {
+		max-width: 960px;
+	}
+	@media screen and (min-width: 1200px) {
+		max-width: 1140px;
+	}
+	// @media screen and (min-width: 1400px){
+	//     max-width: 1320px;
+	// }
+}
+
+.bg-default {
+	background-color: #f4f3f4 !important;
+}

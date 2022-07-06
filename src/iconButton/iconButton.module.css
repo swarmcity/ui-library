@@ -28,15 +28,21 @@ button.icon {
 		opacity: 1;
 	}
 
-	&.disabled {
+	&.disabled,
+	&:disabled {
 		pointer-events: none;
 		&::before {
 			opacity: 0.2;
 		}
 	}
 
-	&.close::before {
-		background-image: url('./images/icon_close_grey3.png');
+	&.close {
+		position: absolute;
+		top: 10px;
+		right: 14px;
+		&::before {
+			background-image: url('./images/icon_close_grey3.png');
+		}
 	}
 
 	&.cancelCreation::before {
@@ -52,10 +58,12 @@ button.icon {
 		background-image: url('./images/icon_imgRotate.png');
 	}
 
-	&.exit::before {
-		background-image: url('./images/icon_logout.png');
-		@media (min-width: 992px) {
-			background-size: 50px;
+	&.exit {
+		&::before {
+			background-image: url('./images/icon_logout.png');
+			@media (min-width: 992px) {
+				background-size: 50px;
+			}
 		}
 	}
 
@@ -66,8 +74,10 @@ button.icon {
 		}
 	}
 
-	&.select::before {
-		background-image: url('./images/icon_next_mktplc.png');
+	&.select {
+		&::before {
+			background-image: url('./images/icon_next_mktplc.png');
+		}
 	}
 
 	&.conflictNext,
@@ -92,7 +102,8 @@ button.icon {
 	&.confirmDanger,
 	&.confirmSend,
 	&.upload,
-	&.badge {
+	&.counter,
+	&.addImage {
 		background-color: #fafafa;
 		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 	}
@@ -103,6 +114,9 @@ button.icon {
 
 	&.requestNext {
 		background-color: #24b1ff;
+		position: absolute;
+		right: 48px;
+		bottom: -10px;
 		&::before {
 			background-image: url('./images/icon_next_bg.png');
 		}
@@ -160,7 +174,34 @@ button.icon {
 		width: 80px;
 		height: 80px;
 		&::before {
-			background-size: 62px 62px;
+			background-size: 62px;
+		}
+	}
+
+	&.counter {
+		width: 20px;
+		height: 20px;
+		font-size: 10px;
+		background-color: #333333;
+	}
+
+	&.addImage {
+		background-color: #24b1ff;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		padding: 1px;
+		bottom: -2px;
+		left: 32px;
+		@media screen and (min-width: 768px) {
+			width: 30px;
+			height: 30px;
+			bottom: -3px;
+			left: 48px;
+		}
+		&::before {
+			background-image: url('./images/icon_new_bg.png');
+			background-size: 100%;
 		}
 	}
 

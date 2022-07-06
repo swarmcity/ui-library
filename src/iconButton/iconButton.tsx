@@ -21,6 +21,8 @@ const VARIANTS = {
 	confirmDanger: classes.confirmDanger,
 	confirmSend: classes.confirmSend,
 	upload: classes.upload,
+	counter: classes.counter,
+	addImage: classes.addImage,
 }
 
 export type ButtonProps = h.JSX.HTMLAttributes<HTMLButtonElement> & {
@@ -39,7 +41,6 @@ export const IconButton = ({
 	<button
 		class={cn(
 			classes.icon,
-			// classes.div,
 			variant && VARIANTS[variant],
 			open && classes.open,
 			disabled && classes.disabled,

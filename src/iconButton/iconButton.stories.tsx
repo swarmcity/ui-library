@@ -9,7 +9,7 @@ export default {
 		variant: {
 			name: 'Variant',
 			control: 'select',
-			options: ['close', 'cancelCreation', 'cancel', 'reply', 'rotateImg', 'exit', 'back', 'collapse', 'select', 'conflictNext', 'requestNext', 'errorNext', 'chat', 'requestStart', 'confirmAction', 'confirmDanger', 'confirmSend', 'upload'],
+			options: ['close', 'cancelCreation', 'cancel', 'reply', 'rotateImg', 'exit', 'back', 'collapse', 'select', 'conflictNext', 'requestNext', 'errorNext', 'chat', 'requestStart', 'confirmAction', 'confirmDanger', 'confirmSend', 'upload', 'counter', 'addImage'],
 			default: 'close',
 		},
 		disabled: {
