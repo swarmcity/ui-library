@@ -30,7 +30,7 @@ export default {
 		},
 		children: {
 			name: 'Button Text',
-		}
+		},
 	},
 } as Meta<typeof Button>
 
