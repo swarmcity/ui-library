@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import cn from 'classnames'
-import classes from './iconButton.module.css'
+import classes from './icon-button.module.css'
 
 const VARIANTS = {
 	cancelCreation: classes.cancelCreation,

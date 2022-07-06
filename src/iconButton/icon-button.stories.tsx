@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import { IconButton } from './iconButton'
+import { IconButton } from './icon-button'
 import type { Meta, Story } from '@storybook/preact'
 
 export default {
