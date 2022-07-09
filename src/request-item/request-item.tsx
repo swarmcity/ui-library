@@ -1,7 +1,10 @@
+// NEED TO FIX IMG FILE LOCATION AFTER FOLDER STRUCTURE IS SET
+
 import { h } from 'preact'
 import cn from 'classnames'
 import classes from './request-item.module.css'
 // import girl from '../assets/imgs/girl.jpg'
+import girl from './girl.jpg'
 
 export type RequestItemProps = h.JSX.HTMLAttributes<HTMLAnchorElement> & {
 	requestTitle?: string
@@ -34,7 +37,7 @@ export const RequestItem = ({
 							: classes.requesterInfo
 					}
 				>
-					{/* <img src={girl} /> */}
+					<img src={girl} />
 					<div>
 						<div>
 							<span>{props.requesterName}</span>
