@@ -6,8 +6,13 @@ export default {
 	title: 'Components/Card',
 	component: Card,
 	argTypes: {
-		footer: {
-			name: 'Card Footer?',
+		// hasFooter: {
+		// 	name: 'Has Footer?',
+		// 	control: 'boolean',
+		// 	defaultValue: false,
+		// },
+		detail: {
+			name: 'Detail?',
 			control: 'boolean',
 			defaultValue: false,
 		},

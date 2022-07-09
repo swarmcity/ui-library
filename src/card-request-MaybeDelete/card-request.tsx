@@ -3,7 +3,7 @@ import { Card } from '../card/card'
 import { CardBody } from '../card-body/card-body'
 import cn from 'classnames'
 import classes from './card-request.module.css'
-import girl from './images/girl.jpg'
+import girl from '../assets/imgs/girl.jpg'
 
 export type CardRequestProps = h.JSX.HTMLAttributes<HTMLAnchorElement> & {
 	requestTitle?: string
