@@ -1,3 +1,6 @@
+import { dset } from 'dset'
+
+// Types
 import type { StorybookViteConfig } from '@storybook/builder-vite'
 
 const config: StorybookViteConfig = {
@@ -15,6 +18,7 @@ const config: StorybookViteConfig = {
 		storyStoreV7: true,
 	},
 	async viteFinal(config) {
+		dset(config, 'css.modules.localsConvention', 'camelCaseOnly')
 		return config
 	},
 }
