@@ -20,7 +20,13 @@ export default {
 
 const Template: Story<typeof Input> = (args) => <Input id="id" {...args} />
 
-export const Default = Template.bind({})
-Default.args = {
+export const Empty = Template.bind({})
+Empty.args = {
 	children: 'Label',
+}
+
+export const WithValue = Template.bind({})
+WithValue.args = {
+	children: 'Label',
+	value: 'Some value',
 }
