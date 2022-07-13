@@ -25,7 +25,7 @@ const VARIANTS = {
 	addImage: classes.addImage,
 }
 
-export type ButtonProps = h.JSX.HTMLAttributes<HTMLButtonElement> & {
+export type IconButtonProps = h.JSX.HTMLAttributes<HTMLButtonElement> & {
 	variant?: keyof typeof VARIANTS
 	disabled?: boolean
 	open?: boolean
@@ -37,7 +37,7 @@ export const IconButton = ({
 	disabled,
 	class: className,
 	...props
-}: ButtonProps) => (
+}: IconButtonProps) => (
 	<button
 		class={cn(
 			classes.icon,
