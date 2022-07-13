@@ -10,8 +10,6 @@ export type FullscreenLoadingProps = {
 	children?: ComponentChildren
 }
 
-console.log(classes)
-
 export const FullscreenLoading = ({ children }: FullscreenLoadingProps) => {
 	return (
 		<div class={classes.fullscreenLoading}>
