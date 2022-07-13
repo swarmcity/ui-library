@@ -10,6 +10,11 @@ export default defineConfig({
 			insertTypesEntry: true,
 		}),
 	],
+	css: {
+		modules: {
+			localsConvention: 'camelCaseOnly',
+		},
+	},
 	build: {
 		sourcemap: true,
 		lib: {
