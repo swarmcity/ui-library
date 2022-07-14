@@ -5,18 +5,7 @@ import type { Meta, Story } from '@storybook/preact'
 export default {
 	title: 'Components/Card',
 	component: Card,
-	argTypes: {
-		// hasFooter: {
-		// 	name: 'Has Footer?',
-		// 	control: 'boolean',
-		// 	defaultValue: false,
-		// },
-		detail: {
-			name: 'Detail?',
-			control: 'boolean',
-			defaultValue: false,
-		},
-	},
+	argTypes: {},
 } as Meta<typeof Card>
 
 const Template: Story<typeof Card> = (args) => <Card {...args} />
