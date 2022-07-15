@@ -3,7 +3,6 @@
 import { h } from 'preact'
 import cn from 'classnames'
 import classes from './request-item.module.css'
-// import girl from '../assets/imgs/girl.jpg'
 import girl from './girl.jpg'
 
 export type RequestItemProps = h.JSX.HTMLAttributes<HTMLAnchorElement> & {
@@ -31,23 +30,16 @@ export const RequestItem = ({
 			<div class={classes.date}>{props.requestDate}</div>
 			<div class={classes.requesterRow}>
 				<div
-					class={
-						props.myRequest
-							? classes.requesterInfo + ' ' + classes.myRequest
-							: classes.requesterInfo
-					}
+					class={cn(
+						classes.requesterInfo,
+						props.myRequest && classes.myRequest
+					)}
 				>
 					<img src={girl} />
 					<div>
 						<div>
 							<span>{props.requesterName}</span>
-							<span
-								class={
-									props.myRequest
-										? classes.dot + ' ' + classes.myDot
-										: classes.dot
-								}
-							></span>
+							<span class={cn(classes.dot, props.myRequest && classes.myDot)} />
 							<span>{props.requesterRep} SWR</span>
 						</div>
 						{/* <div class="">No replies yet</div> */}
