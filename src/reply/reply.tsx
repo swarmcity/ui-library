@@ -1,7 +1,7 @@
 import { h } from 'preact'
 import cn from 'classnames'
 import classes from './reply.module.css'
-import girl from './girl.jpg'
+import defaultAvatar from './defaultAvatar.jpg'
 
 export type ReplyProps = h.JSX.HTMLAttributes<HTMLLIElement> & {
 	replyTitle?: string
@@ -10,6 +10,7 @@ export type ReplyProps = h.JSX.HTMLAttributes<HTMLLIElement> & {
 	replierRep?: number
 	replyAmt?: number
 	myReply?: boolean
+	avatar?: string
 	detail?: boolean
 }
 
@@ -25,7 +26,7 @@ export const Reply = ({ class: className, ...props }: ReplyProps) => (
 					<div
 						class={cn(classes.replierInfo, props.myReply && classes.myReply)}
 					>
-						<img src={girl} />
+						<img src={props.avatar ?? defaultAvatar} />
 						<div>
 							<span>{props.replierName}</span>
 							<span class={cn(classes.dot, props.myReply && classes.myDot)} />
