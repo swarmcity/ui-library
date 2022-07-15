@@ -14,12 +14,12 @@ import classes from './confirm-modal.module.css'
 export type ConfirmModalProps = {
 	cancel?: IconButtonProps
 	confirm?: IconButtonProps
-	color?: 'action' | 'danger'
+	variant?: 'action' | 'danger'
 	children: ComponentChildren
 }
 
 const CONFIRM_VARIANTS: Record<
-	NonNullable<ConfirmModalProps['color']>,
+	NonNullable<ConfirmModalProps['variant']>,
 	Extract<IconButtonProps['variant'], 'confirmAction' | 'confirmDanger'>
 > = {
 	action: 'confirmAction',
@@ -29,16 +29,16 @@ const CONFIRM_VARIANTS: Record<
 export const ConfirmModal = ({
 	cancel,
 	confirm,
-	color = 'action',
+	variant = 'action',
 	children,
 }: ConfirmModalProps) => {
 	return (
-		<div class={cn(classes.confirmModal, classes[color])}>
+		<div class={cn(classes.confirmModal, classes[variant])}>
 			<header>{children}</header>
 			<div class="buttons">
 				{cancel && <IconButton variant="close" {...cancel} />}
 				{confirm && (
-					<IconButton variant={CONFIRM_VARIANTS[color]} {...confirm} />
+					<IconButton variant={CONFIRM_VARIANTS[variant]} {...confirm} />
 				)}
 			</div>
 		</div>
