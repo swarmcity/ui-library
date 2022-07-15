@@ -16,7 +16,7 @@ export default {
 		variant: {
 			name: 'Variant',
 			control: 'select',
-			options: ['default', 'action', 'danger', 'deal'],
+			options: ['default', 'action', 'danger'],
 			default: 'default',
 		},
 		size: {
