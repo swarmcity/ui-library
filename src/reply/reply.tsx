@@ -1,8 +1,6 @@
-// NOT NEEDED FOR EPISODE 1 SO I'M HOLDING OFF ON THIS ONE. NEEDS THE PROPS AND FINISH COMPONENT SETUP/STORY/CLASSES
-
 import { h } from 'preact'
 import cn from 'classnames'
-import reply from './reply.module.css'
+import classes from './reply.module.css'
 import girl from './girl.jpg'
 
 export type ReplyProps = h.JSX.HTMLAttributes<HTMLLIElement> & {
@@ -16,37 +14,27 @@ export type ReplyProps = h.JSX.HTMLAttributes<HTMLLIElement> & {
 }
 
 export const Reply = ({ class: className, ...props }: ReplyProps) => (
-	<li class={cn(reply.reply, className)} {...props}>
-		<a class={cn(reply.reply, className)} href="">
-			<div class={props.detail ? reply.detail : ''}>
-				<div class={reply.titleRow}>
-					<p class={reply.title}>{props.replyTitle}</p>
+	<li class={cn(classes.reply, className)} {...props}>
+		<a class={cn(classes.reply, className)} href="">
+			<div class={cn(props.detail && classes.detail)}>
+				<div class={classes.titleRow}>
+					<p class={classes.title}>{props.replyTitle}</p>
 				</div>
-				<div class={reply.date}>{props.replyDate}</div>
-				<div class={reply.replierRow}>
+				<div class={classes.date}>{props.replyDate}</div>
+				<div class={classes.replierRow}>
 					<div
-						class={
-							props.myReply
-								? reply.replierInfo + ' ' + reply.myReply
-								: reply.replierInfo
-						}
+						class={cn(classes.replierInfo, props.myReply && classes.myReply)}
 					>
 						<img src={girl} />
 						<div>
-							<div>
-								<span>{props.replierName}</span>
-								<span
-									class={
-										props.myReply ? reply.dot + ' ' + reply.myDot : reply.dot
-									}
-								></span>
-								<span>{props.replierRep} SWR</span>
-							</div>
+							<span>{props.replierName}</span>
+							<span class={cn(classes.dot, props.myReply && classes.myDot)} />
+							<span>{props.replierRep} SWR</span>
 						</div>
 					</div>
-					<div class={reply.replyAmt}>
-						<div class={reply.dai}>DAI</div>
-						<div class={reply.amt}>{props.replyAmt}</div>
+					<div class={classes.replyAmt}>
+						<div class={classes.dai}>DAI</div>
+						<div class={classes.amt}>{props.replyAmt}</div>
 					</div>
 				</div>
 			</div>

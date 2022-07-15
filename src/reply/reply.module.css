@@ -84,7 +84,7 @@ a {
 	font-weight: 700;
 	color: #24b1ff;
 
-	&.myRequest {
+	&.myReply {
 		color: #333333;
 	}
 }
