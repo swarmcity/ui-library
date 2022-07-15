@@ -20,10 +20,7 @@ export type ConfirmModalProps = {
 
 const CONFIRM_VARIANTS: Record<
 	NonNullable<ConfirmModalProps['color']>,
-	Extract<
-		IconButtonProps['variant'],
-		'confirmAction' | 'confirmDanger' | 'confirmDeal'
-	>
+	Extract<IconButtonProps['variant'], 'confirmAction' | 'confirmDanger'>
 > = {
 	action: 'confirmAction',
 	danger: 'confirmDanger',
