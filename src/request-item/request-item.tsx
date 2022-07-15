@@ -5,7 +5,7 @@ import cn from 'classnames'
 import classes from './request-item.module.css'
 import girl from './girl.jpg'
 
-export type RequestItemProps = h.JSX.HTMLAttributes<HTMLAnchorElement> & {
+export type RequestItemProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
 	requestTitle?: string
 	requestReplies?: number
 	requestDate?: string
@@ -19,7 +19,7 @@ export const RequestItem = ({
 	class: className,
 	...props
 }: RequestItemProps) => (
-	<a class={cn(classes.request, className)} href="">
+	<div class={cn(classes.request, className)}>
 		<div class={props.detail ? classes.detail : ''}>
 			<div class={classes.titleRow}>
 				<p class={classes.title}>{props.requestTitle}</p>
@@ -42,7 +42,6 @@ export const RequestItem = ({
 							<span class={cn(classes.dot, props.myRequest && classes.myDot)} />
 							<span>{props.requesterRep} SWR</span>
 						</div>
-						{/* <div class="">No replies yet</div> */}
 					</div>
 				</div>
 				<div class={classes.requestAmt}>
@@ -51,5 +50,5 @@ export const RequestItem = ({
 				</div>
 			</div>
 		</div>
-	</a>
+	</div>
 )
