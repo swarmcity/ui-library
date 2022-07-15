@@ -17,3 +17,27 @@ body {
 	display: block;
 	box-shadow: 0px 1px 0px #dfdfdf;
 }
+
+.dividerDashed {
+	border-top: 1px dashed #dfdfdf;
+}
+
+.dividerSolid {
+	border-top: 1px solid #dfdfdf;
+}
+
+.cardBody {
+	position: relative;
+	padding: 27px 48px 24px 30px;
+	margin-bottom: 5px;
+}
+
+.cardFooter {
+	position: relative;
+	padding: 27px 46px 27px 30px;
+	min-height: 14px;
+}
+
+.cardFooter > *:last-child {
+	padding-bottom: 58px;
+}

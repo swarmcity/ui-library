@@ -1,9 +1,0 @@
-.cardFooter {
-	position: relative;
-	padding: 27px 46px 27px 30px;
-	min-height: 14px;
-}
-
-.cardFooter > *:last-child {
-	padding-bottom: 58px;
-}
