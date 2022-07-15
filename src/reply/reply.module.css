@@ -1,5 +1,8 @@
+@import '../css/fonts.css';
+
 .reply {
 	list-style: none;
+	font-family: 'Montserrat';
 }
 
 a {
@@ -26,33 +29,6 @@ a {
 .detail .title {
 	font-size: 20px;
 }
-
-/* .replies {
-	color: #333333;
-	position: relative;
-	padding-right: 15px;
-	font-size: 12px;
-	font-weight: 700;
-	letter-spacing: 0.1px;
-	text-align: right;
-	padding-top: 4px;
-	&::after {
-		position: absolute;
-		content: '';
-		background-image: url('./images/icon_replies.png');
-		background-size: 20px;
-		background-position: center;
-		width: 20px;
-		height: 20px;
-		right: -4px;
-		bottom: -3px;
-		bottom: 0;
-	}
-} */
-
-/* .detail .replies {
-	display: none;
-} */
 
 .date {
 	color: #acacac;
