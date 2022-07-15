@@ -1,0 +1,43 @@
+.requesterInfo {
+	display: flex;
+	justify-content: flex-start;
+	gap: 12px;
+	flex-direction: row;
+	align-items: center;
+	letter-spacing: 0.1px;
+	font-size: 12px;
+	font-weight: 700;
+	color: #24b1ff;
+
+	&.myRequest {
+		color: #333333;
+	}
+}
+
+.requesterInfo img {
+	width: 25px;
+	height: auto;
+	margin-right: 12px;
+	border-radius: 50%;
+	margin: 0;
+	border-style: none;
+}
+
+.detail {
+	&.requesterInfo img {
+		width: 40px;
+	}
+}
+
+.dot {
+	display: inline-block;
+	border-radius: 50%;
+	width: 4px;
+	height: 4px;
+	margin: 2px 3px;
+	background: #24b1ff;
+}
+
+.myDot {
+	background: #333333;
+}
