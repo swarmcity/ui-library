@@ -4,12 +4,12 @@ import classes from './request-item.module.css'
 import defaultAvatar from './defaultAvatar.jpg'
 
 export type RequestItemProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
-	requestTitle?: string
-	requestReplies?: number
-	requestDate?: string
-	requesterName?: string
-	requesterRep?: number
-	requestAmt?: number
+	requestTitle: string
+	requestReplies: number
+	requestDate: Date
+	requesterName: string
+	requesterRep: number
+	requestAmt: number
 	myRequest?: boolean
 	avatar?: string
 	detail?: boolean
@@ -26,7 +26,7 @@ export const RequestItem = ({
 					<span>{props.requestReplies}</span>
 				</div>
 			</div>
-			<div class={classes.date}>{props.requestDate}</div>
+			<div class={classes.date}>{props.requestDate.toLocaleString()}</div>
 			<div class={classes.requesterRow}>
 				<div
 					class={cn(

@@ -18,8 +18,9 @@ export default {
 		},
 		requestDate: {
 			name: 'Request Date',
-			type: { name: 'string', required: true },
-			defaultValue: 'Yesterday, 18:21',
+			type: { name: 'date', required: true },
+			defaultValue: new Date(),
+			default: new Date(),
 		},
 		requesterName: {
 			name: 'Requester Name',
