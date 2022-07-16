@@ -4,11 +4,11 @@ import classes from './reply.module.css'
 import defaultAvatar from './defaultAvatar.jpg'
 
 export type ReplyProps = h.JSX.HTMLAttributes<HTMLLIElement> & {
-	replyTitle?: string
-	replyDate?: string
-	replierName?: string
-	replierRep?: number
-	replyAmt?: number
+	replyTitle: string
+	replyDate: Date
+	replierName: string
+	replierRep: number
+	replyAmt: number
 	myReply?: boolean
 	avatar?: string
 	detail?: boolean
@@ -21,7 +21,7 @@ export const Reply = ({ class: className, ...props }: ReplyProps) => (
 				<div class={classes.titleRow}>
 					<p class={classes.title}>{props.replyTitle}</p>
 				</div>
-				<div class={classes.date}>{props.replyDate}</div>
+				<div class={classes.date}>{props.replyDate.toLocaleString()}</div>
 				<div class={classes.replierRow}>
 					<div
 						class={cn(classes.replierInfo, props.myReply && classes.myReply)}

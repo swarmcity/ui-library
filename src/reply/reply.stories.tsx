@@ -13,8 +13,9 @@ export default {
 		},
 		replyDate: {
 			name: 'Reply Date',
-			type: { name: 'string', required: true },
-			defaultValue: 'Today, 15:01',
+			type: { name: 'date', required: true },
+			defaultValue: new Date(),
+			default: new Date(),
 		},
 		replierName: {
 			name: 'Replier Name',
