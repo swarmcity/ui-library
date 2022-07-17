@@ -1,6 +1,8 @@
 @import '../vars';
+@import '../css/fonts.css';
 
 .fullscreen-loading {
+	font-family: 'Montserrat';
 	outline: none;
 	position: fixed;
 	top: 0;
