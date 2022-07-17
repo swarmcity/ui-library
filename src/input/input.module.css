@@ -83,13 +83,10 @@
 	}
 }
 
-/* Chrome, Firefox, Opera, Safari 10.1+ */
-.input-group {
-	& ::placeholder {
-		font-family: 'Montserrat';
-		color: #262626;
-		opacity: 1;
-		font-weight: 400;
-		font-size: 14px;
-	}
+.input-group ::placeholder {
+	font-family: 'Montserrat';
+	color: #262626;
+	opacity: 1;
+	font-weight: 400;
+	font-size: 14px;
 }
