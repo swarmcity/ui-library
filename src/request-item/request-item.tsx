@@ -2,6 +2,7 @@ import { h } from 'preact'
 import cn from 'classnames'
 import classes from './request-item.module.css'
 import defaultAvatar from './defaultAvatar.jpg'
+import { formatDate } from '../utils'
 
 export type RequestItemProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
 	requestTitle: string
@@ -26,7 +27,7 @@ export const RequestItem = ({
 					<span>{props.requestReplies}</span>
 				</div>
 			</div>
-			<div class={classes.date}>{props.requestDate.toLocaleString()}</div>
+			<div class={classes.date}>{formatDate(props.requestDate)}</div>
 			<div class={classes.requesterRow}>
 				<div
 					class={cn(
