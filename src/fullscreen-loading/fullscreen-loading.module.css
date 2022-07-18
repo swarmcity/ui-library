@@ -31,7 +31,6 @@
 	height: 5px;
 	background: white;
 	margin: 2px;
-	-webkit-animation: dot 1.2s linear infinite;
 	animation: dot 1.2s linear infinite;
 	border-radius: 20px;
 }
@@ -44,25 +43,11 @@
 }
 
 .loading > div:nth-child(2) {
-	-webkit-animation-delay: 0.4s;
 	animation-delay: 0.4s;
 }
 
 .loading > div:nth-child(3) {
-	-webkit-animation-delay: 0.8s;
 	animation-delay: 0.8s;
-}
-
-@-webkit-keyframes dot {
-	0% {
-		transform: scale(0);
-	}
-	50% {
-		transform: scale(1);
-	}
-	100% {
-		transform: scale(0);
-	}
 }
 
 @keyframes dot {
