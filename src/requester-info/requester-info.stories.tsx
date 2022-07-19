@@ -10,11 +10,13 @@ export default {
 			name: 'Requester Name',
 			type: { name: 'string', required: true },
 			defaultValue: 'Sally Singer',
+			default: 'Sally Singer',
 		},
 		requesterRep: {
 			name: 'Requester Reputation',
 			type: { name: 'number', required: true },
 			defaultValue: 52,
+			default: 52,
 		},
 		myRequest: {
 			name: 'My Request?',
