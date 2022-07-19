@@ -21,7 +21,8 @@ export const RequesterInfo = ({
 		class={cn(
 			classes.requesterInfo,
 			props.detail && classes.detail,
-			props.myRequest && classes.myRequest
+			props.myRequest && classes.myRequest,
+			className
 		)}
 	>
 		<img src={props.avatar ?? defaultAvatar} />
