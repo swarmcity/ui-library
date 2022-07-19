@@ -1,0 +1,37 @@
+@import '../vars.css';
+
+.confirm-modal {
+	outline: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	color: #fafafa;
+	padding: 75px 0;
+	text-align: center;
+
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.confirm-modal header {
+	margin-bottom: 100px;
+}
+
+.confirm-modal.action {
+	background-color: var(--action-bg-color);
+	color: var(--action-text-color);
+}
+
+.confirm-modal.danger {
+	background-color: var(--danger-bg-color);
+	color: var(--danger-text-color);
+}
+
+.confirm-modal.deal {
+	background-color: var(--deal-bg-color);
+	color: var(--deal-text-color);
+}
