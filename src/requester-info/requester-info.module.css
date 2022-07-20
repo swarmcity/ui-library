@@ -11,23 +11,20 @@
 	font-size: 12px;
 	font-weight: 700;
 	color: #24b1ff;
-
 	&.myRequest {
 		color: #333333;
 	}
-}
-
-.requesterInfo img {
-	width: 25px;
-	height: auto;
-	border-radius: 50%;
-	margin: 0 12px 0 0;
-	border-style: none;
-}
-
-.detail {
-	&.requesterInfo img {
-		width: 40px;
+	&.detail {
+		& img {
+			width: 40px;
+		}
+	}
+	& img {
+		width: 25px;
+		height: auto;
+		border-radius: 50%;
+		margin: 0 12px 0 0;
+		border-style: none;
 	}
 }
 
