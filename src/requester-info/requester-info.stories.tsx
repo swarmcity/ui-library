@@ -32,7 +32,7 @@ export default {
 } as Meta<typeof RequesterInfo>
 
 const Template: Story<typeof RequesterInfo> = (args) => (
-	<RequesterInfo {...args} />
+	<RequesterInfo requesterName="Sally Singer" requesterRep={52} {...args} />
 )
 
 export const Default = Template.bind({})
