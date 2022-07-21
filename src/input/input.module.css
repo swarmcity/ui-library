@@ -1,3 +1,5 @@
+@import '../fonts.css';
+
 .input-group {
 	margin-top: 40px;
 	display: flex;
@@ -6,6 +8,7 @@
 }
 
 .input-group input {
+	font-family: 'Montserrat';
 	color: #333333;
 	font-weight: 700;
 	font-size: 16px;
@@ -22,6 +25,7 @@
 }
 
 .input-group label {
+	font-family: 'Montserrat';
 	color: #262626;
 	position: absolute;
 	bottom: 10px;
@@ -80,6 +84,7 @@
 }
 
 .input-group ::placeholder {
+	font-family: 'Montserrat';
 	color: #262626;
 	opacity: 1;
 	font-weight: 400;
