@@ -1,5 +1,3 @@
-// NEED TO DETERMINE WHERE IMAGE COMES FROM
-
 import { h } from 'preact'
 import cn from 'classnames'
 import classes from './requester-info.module.css'
