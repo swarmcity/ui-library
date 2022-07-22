@@ -55,19 +55,34 @@ button.icon {
 		background-image: url('./images/icon_imgRotate.png');
 	}
 
-	&.exit {
-		&::before {
+	&.exit::before {
+		-webkit-mask: url('./images/icon_logout.svg') no-repeat 50% 50%;
+		mask: url('./images/icon_back.svg') no-repeat 50% 50%;
+		-webkit-mask-size: 36px;
+		mask-size: 36px;
+		background-color: gray;
+		@media (min-width: 992px) {
+			-webkit-mask-size: 50px;
+			mask-size: 50px;
+		}
+	} {
+		/* &::before {
 			background-image: url('./images/icon_logout.png');
 			@media (min-width: 992px) {
 				background-size: 50px;
 			}
 		}
-	}
+	} */
 
 	&.back::before {
-		background-image: url('./images/icon_back.png');
+		-webkit-mask: url('./images/icon_back.svg') no-repeat 50% 50%;
+		mask: url('./images/icon_back.svg') no-repeat 50% 50%;
+		-webkit-mask-size: 36px;
+		mask-size: 36px;
+		background-color: gray;
 		@media (min-width: 992px) {
-			background-size: 50px;
+			-webkit-mask-size: 50px;
+			mask-size: 50px;
 		}
 	}
 
