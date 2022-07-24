@@ -9,4 +9,8 @@
 	--deal-text-color: #fafafa;
 
 	--loading-bg-color: var(--deal-bg-color);
+
+	--secondary-color-3: #666666;
+	--secondary-color-4: #333333;
+	--base: #fafafa;
 }
