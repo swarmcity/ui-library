@@ -33,6 +33,11 @@ export default {
 			],
 			defaultValue: 'close',
 		},
+		children: {
+			name: 'Counter',
+			control: 'number',
+			defaultValue: 172,
+		},
 		disabled: {
 			name: 'Disable',
 			control: 'boolean',

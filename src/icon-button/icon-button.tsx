@@ -32,6 +32,7 @@ export type IconButtonProps = h.JSX.HTMLAttributes<HTMLButtonElement> & {
 }
 
 export const IconButton = ({
+	children,
 	variant,
 	open,
 	disabled,
@@ -47,5 +48,7 @@ export const IconButton = ({
 			className
 		)}
 		{...props}
-	/>
+	>
+		{variant === 'counter' && children}
+	</button>
 )
