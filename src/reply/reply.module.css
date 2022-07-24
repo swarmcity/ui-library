@@ -1,0 +1,118 @@
+@import '../css/fonts.css';
+
+.reply {
+	list-style: none;
+	font-family: 'Montserrat';
+}
+
+a {
+	text-decoration: none;
+}
+
+.titleRow {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 15px;
+}
+
+.title {
+	flex-basis: 75%;
+	color: #333333;
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 24px;
+	margin: 0;
+}
+
+.detail .title {
+	font-size: 20px;
+}
+
+.date {
+	color: #acacac;
+	font-size: 10px;
+	font-weight: 300;
+	line-height: 1.3;
+}
+
+.detail .date {
+	font-size: 12px;
+}
+
+.replierRow {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 15px;
+	margin-top: 7px;
+}
+
+.replierInfo {
+	display: flex;
+	justify-content: flex-start;
+	gap: 12px;
+	flex-direction: row;
+	align-items: center;
+	letter-spacing: 0.1px;
+	font-size: 12px;
+	font-weight: 700;
+	color: #24b1ff;
+
+	&.myReply {
+		color: #333333;
+	}
+}
+
+.replierInfo img {
+	width: 25px;
+	height: auto;
+	margin-right: 12px;
+	border-radius: 50%;
+	margin: 0;
+	border-style: none;
+}
+
+.detail .replierInfo img {
+	width: 40px;
+}
+
+.dot {
+	display: inline-block;
+	border-radius: 50%;
+	width: 4px;
+	height: 4px;
+	margin: 2px 3px;
+	background: #24b1ff;
+}
+
+.myDot {
+	background: #333333;
+}
+
+.replyAmt {
+	text-align: right;
+	color: #efd96f;
+	letter-spacing: 0.1px;
+	font-weight: 700;
+}
+
+.replyAmt .dai {
+	font-size: 10px;
+	line-height: 10px;
+}
+
+.detail .replyAmt .dai {
+	font-size: 12px;
+	line-height: 12px;
+}
+
+.replyAmt .amt {
+	line-height: 24px;
+	font-size: 24px;
+}
+
+.detail .replyAmt .amt {
+	font-size: 26px;
+}
