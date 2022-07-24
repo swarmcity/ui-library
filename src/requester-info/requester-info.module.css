@@ -1,4 +1,5 @@
-@import '../css/fonts.css';
+@import '../fonts.css';
+@import '../vars.css';
 
 .requesterInfo {
 	font-family: 'Montserrat';
@@ -11,10 +12,24 @@
 	font-size: 12px;
 	font-weight: 700;
 	color: #24b1ff;
-	&.myRequest {
-		color: #333333;
+
+	& .dot {
+		display: inline-block;
+		border-radius: 50%;
+		width: 4px;
+		height: 4px;
+		margin: 2px 3px;
+		background: var(--action-bg-color);
 	}
-	&.detail {
+
+	&.myRequest {
+		color: var(--secondary-color-4);
+
+		& .dot {
+			background: var(--secondary-color-4);
+		}
+	}
+	&.requesterDetail {
 		& img {
 			width: 40px;
 		}
@@ -26,17 +41,4 @@
 		margin: 0 12px 0 0;
 		border-style: none;
 	}
-}
-
-.dot {
-	display: inline-block;
-	border-radius: 50%;
-	width: 4px;
-	height: 4px;
-	margin: 2px 3px;
-	background: #24b1ff;
-}
-
-.myDot {
-	background: #333333;
 }
