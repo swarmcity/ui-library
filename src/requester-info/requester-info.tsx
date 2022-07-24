@@ -1,7 +1,7 @@
 import { h } from 'preact'
 import cn from 'classnames'
 import classes from './requester-info.module.css'
-import defaultAvatar from './defaultAvatar.jpg'
+import defaultAvatar from './default-avatar.jpg'
 
 export type RequesterInfoProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
 	requesterName: string
