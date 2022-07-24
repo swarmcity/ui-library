@@ -1,6 +1,6 @@
 import { h } from 'preact'
-import { RequestItem } from './request-item'
 import type { Meta, Story } from '@storybook/preact'
+import { RequestItem } from './request-item'
 
 export default {
 	title: 'Components/Request Item',
@@ -22,16 +22,6 @@ export default {
 			defaultValue: new Date(),
 			default: new Date(),
 		},
-		requesterName: {
-			name: 'Requester Name',
-			type: { name: 'string', required: true },
-			defaultValue: 'Sally Singer',
-		},
-		requesterRep: {
-			name: 'Requester Reputation',
-			type: { name: 'number', required: true },
-			defaultValue: 52,
-		},
 		requestAmt: {
 			name: 'Request Amount',
 			type: { name: 'number', required: true },
@@ -50,6 +40,15 @@ export default {
 	},
 } as Meta<typeof RequestItem>
 
-const Template: Story<typeof RequestItem> = (args) => <RequestItem {...args} />
+const Template: Story<typeof RequestItem> = (args) => (
+	<RequestItem
+		requestTitle="A meatball sub from Freds, NY"
+		requestReplies={4}
+		requestDate={new Date()}
+		requestAmt={12}
+		RequesterInfo
+		{...args}
+	/>
+)
 
 export const Default = Template.bind({})
