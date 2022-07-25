@@ -29,7 +29,7 @@
 			background: var(--secondary-color-4);
 		}
 	}
-	&.requesterDetail {
+	&.detail {
 		& img {
 			width: 40px;
 		}

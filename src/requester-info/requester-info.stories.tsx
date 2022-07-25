@@ -23,7 +23,7 @@ export default {
 			control: 'boolean',
 			defaultValue: false,
 		},
-		requesterDetail: {
+		detail: {
 			name: 'Detail?',
 			control: 'boolean',
 			defaultValue: false,

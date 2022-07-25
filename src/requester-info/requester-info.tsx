@@ -8,7 +8,7 @@ export type RequesterInfoProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
 	requesterRep: number
 	myRequest?: boolean
 	avatar?: string
-	requesterDetail?: boolean
+	detail?: boolean
 }
 
 export const RequesterInfo = ({
@@ -18,7 +18,7 @@ export const RequesterInfo = ({
 	<div
 		class={cn(
 			classes.requesterInfo,
-			props.requesterDetail && classes.requesterDetail,
+			props.detail && classes.detail,
 			props.myRequest && classes.myRequest,
 			className
 		)}
