@@ -37,4 +37,4 @@ jobs:
           add: 'package.json package-lock.json'
           default_author: github_actor
           message: 'chore: bump to v${{ steps.get-version.outputs.version }}'
-          push: true
+          push: 'origin main --set-upstream --force'
