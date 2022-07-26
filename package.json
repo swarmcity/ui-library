@@ -44,7 +44,8 @@
 		".": {
 			"import": "./dist/ui-library.es.js",
 			"require": "./dist/ui-library.umd.js"
-		}
+		},
+		"./dist/style.css": "./dist/style.css"
 	},
 	"dependencies": {
 		"classnames": "^2.3.1",
