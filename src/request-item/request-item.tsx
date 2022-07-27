@@ -1,6 +1,6 @@
-import { ComponentChild, h } from 'preact'
+import { h } from 'preact'
 import cn from 'classnames'
-import { RequesterInfo } from '../requester-info/requester-info'
+import { UserInfo, UserInfoProps } from '../user-info/user-info'
 import classes from './request-item.module.css'
 import { formatDate } from '../utils'
 
@@ -9,14 +9,15 @@ export type RequestItemProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
 	requestReplies: number
 	requestDate: Date
 	requestAmt: number
-	myRequest?: boolean
+	myself?: boolean
 	avatar?: string
 	detail?: boolean
 	requesterDetail?: boolean
-	RequesterInfo: ComponentChild
+	user: UserInfoProps
 }
 export const RequestItem = ({
 	class: className,
+	user,
 	...props
 }: RequestItemProps) => (
 	<div class={cn(classes.request, props.detail && classes.detail, className)}>
@@ -28,12 +29,7 @@ export const RequestItem = ({
 		</div>
 		<div class={classes.date}>{formatDate(props.requestDate)}</div>
 		<div class={classes.requesterRow}>
-			<RequesterInfo
-				requesterName="Sally Singer"
-				requesterRep={52}
-				detail={props.detail}
-				myRequest={props.myRequest}
-			/>
+			<UserInfo {...user} />
 			<div class={classes.requestAmt}>
 				<div class={classes.dai}>DAI</div>
 				<div class={classes.amt}>{props.requestAmt}</div>

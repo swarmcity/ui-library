@@ -1,25 +1,25 @@
 import { h } from 'preact'
-import { RequesterInfo } from './requester-info'
+import { UserInfo } from './user-info'
 import type { Meta, Story } from '@storybook/preact'
 
 export default {
-	title: 'Components/Requester Info',
-	component: RequesterInfo,
+	title: 'Components/User Info',
+	component: UserInfo,
 	argTypes: {
-		requesterName: {
-			name: 'Requester Name',
+		name: {
+			name: 'User Name',
 			type: { name: 'string', required: true },
 			defaultValue: 'Sally Singer',
 			default: 'Sally Singer',
 		},
-		requesterRep: {
-			name: 'Requester Reputation',
+		reputation: {
+			name: 'User Reputation',
 			type: { name: 'number', required: true },
 			defaultValue: 52,
 			default: 52,
 		},
-		myRequest: {
-			name: 'My Request?',
+		myself: {
+			name: 'Is this me?',
 			control: 'boolean',
 			defaultValue: false,
 		},
@@ -29,10 +29,10 @@ export default {
 			defaultValue: false,
 		},
 	},
-} as Meta<typeof RequesterInfo>
+} as Meta<typeof UserInfo>
 
-const Template: Story<typeof RequesterInfo> = (args) => (
-	<RequesterInfo requesterName="Sally Singer" requesterRep={52} {...args} />
+const Template: Story<typeof UserInfo> = (args) => (
+	<UserInfo name="Sally Singer" reputation={52} {...args} />
 )
 
 export const Default = Template.bind({})
