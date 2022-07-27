@@ -1,3 +1,5 @@
+@import '../vars.css';
+
 button.icon {
 	position: relative;
 	display: inline-block;
@@ -16,10 +18,10 @@ button.icon {
 	&::before {
 		position: absolute;
 		content: '';
-		background-color: transparent;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 36px;
+		mask-size: 50px;
+		mask-position: 50% 50%;
+		mask-repeat: no-repeat;
+		background-color: var(--secondary-color-3);
 		width: 100%;
 		height: 100%;
 		top: 50%;
@@ -36,44 +38,52 @@ button.icon {
 		}
 	}
 
-	&.close {
-		&::before {
-			background-image: url('./images/icon_close_grey3.png');
-		}
+	&.close::before {
+		mask-image: url('./images/icon-close.svg');
+		background-color: var(--secondary-color-3);
 	}
 
 	&.cancelCreation::before {
-		background-image: url('./images/icon_cancel_bg.png');
+		mask-image: url('./images/icon-cancel.svg');
+		background-color: var(--base);
 	}
 
 	&.cancel::before {
-		background-image: url('./images/icon_cancel.png');
-		background-size: 50px;
+		mask-image: url('./images/icon-cancel.svg');
+		background-color: var(--secondary-color-4);
 	}
 
 	&.rotateImg::before {
-		background-image: url('./images/icon_imgRotate.png');
+		mask-image: url('./images/icon-rotate.svg');
+		mask-size: 36px;
+		background-color: var(--action-bg-color);
 	}
 
-	&.exit {
-		&::before {
-			background-image: url('./images/icon_logout.png');
-			@media (min-width: 992px) {
-				background-size: 50px;
-			}
+	&.exit::before {
+		mask-image: url('./images/icon-logout.svg');
+		mask-size: 36px;
+		background-color: var(--secondary-color-3);
+		@media (min-width: 992px) {
+			mask-size: 50px;
 		}
 	}
 
 	&.back::before {
-		background-image: url('./images/icon_back.png');
+		mask-image: url('./images/icon-back.svg');
+		mask-size: 36px;
+		background-color: var(--secondary-color-3);
 		@media (min-width: 992px) {
-			background-size: 50px;
+			mask-size: 50px;
 		}
 	}
 
 	&.select {
+		width: 36px;
+		height: 36px;
 		&::before {
-			background-image: url('./images/icon_next_mktplc.png');
+			mask-image: url('./images/icon-next.svg');
+			mask-size: 36px;
+			background-color: var(--secondary-color-4);
 		}
 	}
 
@@ -85,7 +95,7 @@ button.icon {
 		width: 72px;
 		height: 72px;
 		&::before {
-			background-size: 56px;
+			mask-size: 56px !important;
 		}
 	}
 
@@ -101,39 +111,45 @@ button.icon {
 	&.upload,
 	&.counter,
 	&.addImage {
-		background-color: #fafafa;
+		background-color: var(--base);
 		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 	}
 
 	&.conflictNext::before {
-		background-image: url('./images/icon_next_action.png');
+		mask-image: url('./images/icon-next.svg');
+		background-color: var(--action-bg-color);
 	}
 
 	&.requestNext {
 		background-color: #24b1ff;
 		&::before {
-			background-image: url('./images/icon_next_bg.png');
+			mask-image: url('./images/icon-next.svg');
+			background-color: var(--base);
 		}
 	}
 
 	&.errorNext::before {
-		background-image: url('./images/icon_next_danger.png');
+		mask-image: url('./images/icon-next.svg');
+		background-color: var(--danger-bg-color);
 	}
 
 	&.confirmAction::before {
-		background-image: url('./images/icon_confirm_action.png');
+		mask-image: url('./images/icon-confirm.svg');
+		background-color: var(--action-bg-color);
 	}
 
 	&.confirmDanger::before {
-		background-image: url('./images/icon_confirm_danger.png');
+		mask-image: url('./images/icon-confirm.svg');
+		background-color: var(--danger-bg-color);
 	}
 
 	&.confirmSend {
 		width: 50px;
 		height: 50px;
 		&::before {
-			background-image: url('./images/icon_confirm_send.png');
-			background-size: 38px;
+			mask-image: url('./images/icon-confirm.svg');
+			mask-size: 38px !important;
+			background-color: var(--secondary-color-4);
 		}
 	}
 
@@ -144,22 +160,24 @@ button.icon {
 			transform: rotate(90deg);
 		}
 		&::before {
-			background-image: url('./images/icon_next_action.png');
+			mask-image: url('./images/icon-next.svg');
+			background-color: var(--action-bg-color);
 		}
 	}
 
-	&.requestStart {
-		&::before {
-			background-image: url('./images/icon_new.png');
-		}
+	&.requestStart::before {
+		mask-image: url('./images/icon-new.svg');
+		background-color: var(--action-bg-color);
 	}
 
 	&.reply::before {
-		background-image: url('./images/icon_reply.png');
+		mask-image: url('./images/icon-reply.svg');
+		background-color: var(--action-bg-color);
 	}
 
 	&.chat::before {
-		background-image: url('./images/icon_chat.png');
+		mask-image: url('./images/icon-chat.svg');
+		background-color: var(--action-bg-color);
 	}
 
 	&.requestStart,
@@ -168,7 +186,7 @@ button.icon {
 		width: 80px;
 		height: 80px;
 		&::before {
-			background-size: 62px;
+			mask-size: 62px;
 		}
 	}
 
@@ -176,8 +194,11 @@ button.icon {
 		width: 20px;
 		height: 20px;
 		font-size: 10px;
-		background-color: #333333;
-		color: #fafafa;
+		background-color: var(--secondary-color-4);
+		color: var(--base);
+		&::before {
+			content: none;
+		}
 	}
 
 	&.addImage {
@@ -189,8 +210,9 @@ button.icon {
 			height: 30px;
 		}
 		&::before {
-			background-image: url('./images/icon_new_bg.png');
-			background-size: 100%;
+			mask-image: url('./images/icon-new.svg');
+			background-color: var(--base);
+			mask-size: 100%;
 		}
 	}
 
@@ -199,8 +221,9 @@ button.icon {
 		width: 30px;
 		height: 30px;
 		&::before {
-			background-image: url('./images/icon_upload_bg.png');
-			background-size: 23px;
+			mask-image: url('./images/icon-upload.svg');
+			mask-size: 23px;
+			background-color: var(--base);
 		}
 	}
 }
