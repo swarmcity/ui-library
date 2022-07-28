@@ -1,7 +1,7 @@
 import { h } from 'preact'
 import cn from 'classnames'
 import { UserInfo, UserInfoProps } from '../user-info/user-info'
-import classes from './marketplace-list-item.module.css'
+import classes from './marketplace-item.module.css'
 import { formatDate } from '../utils'
 
 export type MarketplaceItemProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
