@@ -1,27 +1,25 @@
 import { h } from 'preact'
 import cn from 'classnames'
 import { UserInfo, UserInfoProps } from '../user-info/user-info'
-import classes from './request-item.module.css'
+import classes from './marketplace-item.module.css'
 import { formatDate } from '../utils'
 
-export type RequestItemProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
+export type MarketplaceItemProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
 	title: string
 	repliesCount: number
 	date: Date
 	amount: number
-	detail?: boolean
 	user: UserInfoProps
 }
-export const RequestItem = ({
+export const MarketplaceItem = ({
 	class: className,
-	user,
-	date,
 	title,
 	repliesCount,
+	date,
 	amount,
-	detail,
-}: RequestItemProps) => (
-	<div class={cn(classes.request, detail && classes.detail, className)}>
+	user,
+}: MarketplaceItemProps) => (
+	<div class={cn(classes.request, className)}>
 		<div class={classes.titleRow}>
 			<p class={classes.title}>{title}</p>
 			<div class={classes.replies}>

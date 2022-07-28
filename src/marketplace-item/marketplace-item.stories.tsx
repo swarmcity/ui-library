@@ -1,40 +1,34 @@
 import { h } from 'preact'
 import type { Meta, Story } from '@storybook/preact'
-import { RequestItem, RequestItemProps } from './request-item'
+import { MarketplaceItem, MarketplaceItemProps } from './marketplace-item'
 
 export default {
-	title: 'Components/Request Item',
-	component: RequestItem,
+	title: 'Components/Marketplace List Item',
+	component: MarketplaceItem,
 	argTypes: {
 		title: {
-			name: 'Request Title',
+			name: 'Title',
 			type: { name: 'string', required: true },
-			defaultValue: 'A meatball sub from Freds, NY',
+			defaultValue: 'Translate my 1 page manifesto from ENG to NL?',
 		},
 		repliesCount: {
 			name: 'Replies Amount',
 			type: { name: 'number', required: true },
-			defaultValue: 4,
+			defaultValue: 1,
 		},
 		date: {
-			name: 'Request Date',
+			name: 'Date',
 			type: { name: 'date', required: true },
 			defaultValue: new Date(),
 			default: new Date(),
 		},
 		amount: {
-			name: 'Request Amount',
+			name: 'Amount',
 			type: { name: 'number', required: true },
-			defaultValue: 12,
-		},
-		detail: {
-			name: 'Detail?',
-			control: 'boolean',
-			defaultValue: false,
+			defaultValue: 33,
 		},
 		user: {
 			control: 'object',
-			type: { name: 'object', required: true },
 			defaultValue: {
 				name: 'Frank',
 				reputation: 1,
@@ -42,10 +36,10 @@ export default {
 			},
 		},
 	},
-} as Meta<typeof RequestItem>
+} as Meta<typeof MarketplaceItem>
 
-const Template: Story<typeof RequestItem> = (args) => (
-	<RequestItem {...(args as unknown as RequestItemProps)} />
+const Template: Story<typeof MarketplaceItem> = (args) => (
+	<MarketplaceItem {...(args as unknown as MarketplaceItemProps)} />
 )
 
 export const Default = Template.bind({})
