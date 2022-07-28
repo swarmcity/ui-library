@@ -5,34 +5,35 @@ import classes from './request-item.module.css'
 import { formatDate } from '../utils'
 
 export type RequestItemProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
-	requestTitle: string
-	requestReplies: number
-	requestDate: Date
-	requestAmt: number
-	myself?: boolean
-	avatar?: string
+	title: string
+	repliesCount: number
+	date: Date
+	amount: number
 	detail?: boolean
-	requesterDetail?: boolean
 	user: UserInfoProps
 }
 export const RequestItem = ({
 	class: className,
 	user,
-	...props
+	date,
+	title,
+	repliesCount,
+	amount,
+	detail,
 }: RequestItemProps) => (
-	<div class={cn(classes.request, props.detail && classes.detail, className)}>
+	<div class={cn(classes.request, detail && classes.detail, className)}>
 		<div class={classes.titleRow}>
-			<p class={classes.title}>{props.requestTitle}</p>
+			<p class={classes.title}>{title}</p>
 			<div class={classes.replies}>
-				<span>{props.requestReplies}</span>
+				<span>{repliesCount}</span>
 			</div>
 		</div>
-		<div class={classes.date}>{formatDate(props.requestDate)}</div>
+		<div class={classes.date}>{formatDate(date)}</div>
 		<div class={classes.requesterRow}>
 			<UserInfo {...user} />
 			<div class={classes.requestAmt}>
 				<div class={classes.dai}>DAI</div>
-				<div class={classes.amt}>{props.requestAmt}</div>
+				<div class={classes.amt}>{amount}</div>
 			</div>
 		</div>
 	</div>

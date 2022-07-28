@@ -32,6 +32,7 @@ export default {
 			defaultValue: {
 				name: 'Frank',
 				reputation: 1,
+				myself: false,
 			},
 		},
 	},

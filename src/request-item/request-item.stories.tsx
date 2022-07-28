@@ -6,31 +6,26 @@ export default {
 	title: 'Components/Request Item',
 	component: RequestItem,
 	argTypes: {
-		requestTitle: {
+		title: {
 			name: 'Request Title',
 			type: { name: 'string', required: true },
 			defaultValue: 'A meatball sub from Freds, NY',
 		},
-		requestReplies: {
+		repliesCount: {
 			name: 'Replies Amount',
 			type: { name: 'number', required: true },
 			defaultValue: 4,
 		},
-		requestDate: {
+		date: {
 			name: 'Request Date',
 			type: { name: 'date', required: true },
 			defaultValue: new Date(),
 			default: new Date(),
 		},
-		requestAmt: {
+		amount: {
 			name: 'Request Amount',
 			type: { name: 'number', required: true },
 			defaultValue: 12,
-		},
-		myRequest: {
-			name: 'My Request?',
-			control: 'boolean',
-			defaultValue: false,
 		},
 		detail: {
 			name: 'Detail?',
@@ -43,6 +38,7 @@ export default {
 			defaultValue: {
 				name: 'Frank',
 				reputation: 1,
+				myself: false,
 			},
 		},
 	},
