@@ -21,6 +21,10 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
+env:
+  PUBLIC_PATH: '/ui-library'
+  PUBLIC_URL: 'vojtechsimetka.github.io'
+
 jobs:
   # Single deploy job since we're just deploying
   deploy:
@@ -46,7 +50,7 @@ jobs:
 
       - name: Build for gh-pages
         run: |
-          npm run build-storybook
+          npm run build-storybook -- --preview-url=/${{ env.PUBLIC_PATH }}/iframe.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v1
