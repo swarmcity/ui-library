@@ -19,7 +19,6 @@ const config: StorybookViteConfig = {
 	},
 	async viteFinal(config) {
 		dset(config, 'css.modules.localsConvention', 'camelCaseOnly')
-		dset(config, 'config.output.publicPath', `${process.env.PUBLIC_URL ?? ''} ${process.env.PUBLIC_PATH ?? ''}`)
 		return config
 	},
 }
