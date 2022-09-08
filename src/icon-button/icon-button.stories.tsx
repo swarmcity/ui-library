@@ -24,6 +24,7 @@ export default {
 				'confirmSend',
 				'counter',
 				'exit',
+				'expand',
 				'reply',
 				'requestNext',
 				'requestStart',
@@ -40,11 +41,6 @@ export default {
 		},
 		disabled: {
 			name: 'Disable',
-			control: 'boolean',
-			defaultValue: false,
-		},
-		open: {
-			name: 'Toggle (collapse only)',
 			control: 'boolean',
 			defaultValue: false,
 		},

@@ -11,6 +11,7 @@ const VARIANTS = {
 	exit: classes.exit,
 	back: classes.back,
 	collapse: classes.collapse,
+	expand: classes.expand,
 	select: classes.select,
 	conflictNext: classes.conflictNext,
 	requestNext: classes.requestNext,
@@ -28,13 +29,11 @@ const VARIANTS = {
 export type IconButtonProps = h.JSX.HTMLAttributes<HTMLButtonElement> & {
 	variant?: keyof typeof VARIANTS
 	disabled?: boolean
-	open?: boolean
 }
 
 export const IconButton = ({
 	children,
 	variant,
-	open,
 	disabled,
 	class: className,
 	...props
@@ -43,7 +42,6 @@ export const IconButton = ({
 		class={cn(
 			classes.icon,
 			variant && VARIANTS[variant],
-			open && classes.open,
 			disabled && classes.disabled,
 			className
 		)}
