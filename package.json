@@ -27,6 +27,7 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-config-react": "^1.1.7",
 		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-react": "^7.31.8",
 		"json": "^11.0.0",
 		"postcss-nesting": "^10.1.10",
 		"simple-git-hooks": "^2.8.0",
@@ -61,7 +62,8 @@
 			"prettier",
 			"plugin:prettier/recommended",
 			"plugin:@typescript-eslint/eslint-recommended",
-			"plugin:@typescript-eslint/recommended"
+			"plugin:@typescript-eslint/recommended",
+			"plugin:react/jsx-runtime"
 		],
 		"parser": "@typescript-eslint/parser",
 		"plugins": [
@@ -81,6 +83,9 @@
 			"react/react-in-jsx-scope": "off"
 		},
 		"settings": {
+			"react": {
+				"version": "detect"
+			},
 			"jest": {
 				"version": 27
 			}
