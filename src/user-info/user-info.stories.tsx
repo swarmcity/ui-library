@@ -1,6 +1,5 @@
-import { h } from 'preact'
 import { UserInfo } from './user-info'
-import type { Meta, Story } from '@storybook/preact'
+import type { Meta, Story } from '@storybook/react'
 
 export default {
 	title: 'Components/User Info',

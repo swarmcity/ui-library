@@ -1,4 +1,3 @@
-import { h } from 'preact'
 import cn from 'classnames'
 
 // Components
@@ -6,7 +5,7 @@ import { IconButton } from '../icon-button/icon-button'
 
 // Types
 import type { IconButtonProps } from '../icon-button/icon-button'
-import type { ComponentChildren } from 'preact'
+import type { ReactNode } from 'react'
 
 // Style
 import classes from './confirm-modal.module.css'
@@ -15,7 +14,7 @@ export type ConfirmModalProps = {
 	cancel?: IconButtonProps
 	confirm?: IconButtonProps
 	variant?: 'action' | 'danger'
-	children: ComponentChildren
+	children: ReactNode
 }
 
 const CONFIRM_VARIANTS: Record<
@@ -33,9 +32,9 @@ export const ConfirmModal = ({
 	children,
 }: ConfirmModalProps) => {
 	return (
-		<div class={cn(classes.confirmModal, classes[variant])}>
+		<div className={cn(classes.confirmModal, classes[variant])}>
 			<header>{children}</header>
-			<div class="buttons">
+			<div className="buttons">
 				{cancel && <IconButton variant="close" {...cancel} />}
 				{confirm && (
 					<IconButton variant={CONFIRM_VARIANTS[variant]} {...confirm} />

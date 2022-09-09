@@ -1,9 +1,9 @@
-import { h } from 'preact'
 import cn from 'classnames'
+import { HTMLAttributes, ReactNode } from 'react'
 import classes from './card.module.css'
 
-export type CardProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
-	footer?: h.JSX.Element
+export type CardProps = HTMLAttributes<HTMLDivElement> & {
+	footer?: ReactNode
 	divider?: 'solid' | 'dashed'
 }
 
@@ -11,15 +11,15 @@ export const Card = ({
 	children,
 	footer,
 	divider,
-	class: className,
+	className,
 	...props
 }: CardProps) => (
-	<div class={cn(classes.card, className)} {...props}>
-		<div class={classes.cardBody}>{children}</div>
+	<div className={cn(classes.card, className)} {...props}>
+		<div className={classes.cardBody}>{children}</div>
 
 		{footer && (
 			<div
-				class={cn(
+				className={cn(
 					classes.cardFooter,
 					divider === 'solid' ? classes.dividerSolid : classes.dividerDashed
 				)}

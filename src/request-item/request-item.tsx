@@ -1,10 +1,10 @@
-import { h } from 'preact'
 import cn from 'classnames'
 import { UserInfo, UserInfoProps } from '../user-info/user-info'
 import classes from './request-item.module.css'
 import { formatDate } from '../utils'
+import { HTMLAttributes } from 'react'
 
-export type RequestItemProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
+export type RequestItemProps = HTMLAttributes<HTMLDivElement> & {
 	title: string
 	repliesCount: number
 	date: Date
@@ -13,7 +13,7 @@ export type RequestItemProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
 	user: UserInfoProps
 }
 export const RequestItem = ({
-	class: className,
+	className,
 	user,
 	date,
 	title,
@@ -21,19 +21,19 @@ export const RequestItem = ({
 	amount,
 	detail,
 }: RequestItemProps) => (
-	<div class={cn(classes.request, detail && classes.detail, className)}>
-		<div class={classes.titleRow}>
-			<p class={classes.title}>{title}</p>
-			<div class={classes.replies}>
+	<div className={cn(classes.request, detail && classes.detail, className)}>
+		<div className={classes.titleRow}>
+			<p className={classes.title}>{title}</p>
+			<div className={classes.replies}>
 				<span>{repliesCount}</span>
 			</div>
 		</div>
-		<div class={classes.date}>{formatDate(date)}</div>
-		<div class={classes.requesterRow}>
+		<div className={classes.date}>{formatDate(date)}</div>
+		<div className={classes.requesterRow}>
 			<UserInfo {...user} />
-			<div class={classes.requestAmt}>
-				<div class={classes.dai}>DAI</div>
-				<div class={classes.amt}>{amount}</div>
+			<div className={classes.requestAmt}>
+				<div className={classes.dai}>DAI</div>
+				<div className={classes.amt}>{amount}</div>
 			</div>
 		</div>
 	</div>

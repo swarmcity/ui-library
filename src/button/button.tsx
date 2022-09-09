@@ -1,5 +1,5 @@
-import { h } from 'preact'
 import cn from 'classnames'
+import { ButtonHTMLAttributes } from 'react'
 import classes from './button.module.css'
 
 const VARIANTS = {
@@ -13,7 +13,7 @@ const SIZE = {
 	large: classes.large,
 }
 
-export type ButtonProps = h.JSX.HTMLAttributes<HTMLButtonElement> & {
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	variant?: keyof typeof VARIANTS
 	bg?: boolean
 	size?: keyof typeof SIZE
@@ -25,11 +25,11 @@ export const Button = ({
 	bg,
 	size,
 	disabled,
-	class: className,
+	className,
 	...props
 }: ButtonProps) => (
 	<button
-		class={cn(
+		className={cn(
 			classes.button,
 			variant && VARIANTS[variant],
 			bg && classes.bg,

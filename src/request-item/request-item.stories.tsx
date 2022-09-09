@@ -1,5 +1,4 @@
-import { h } from 'preact'
-import type { Meta, Story } from '@storybook/preact'
+import type { Meta, Story } from '@storybook/react'
 import { RequestItem, RequestItemProps } from './request-item'
 
 export default {

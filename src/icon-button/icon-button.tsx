@@ -1,5 +1,5 @@
-import { h } from 'preact'
 import cn from 'classnames'
+import { ButtonHTMLAttributes } from 'react'
 import classes from './icon-button.module.css'
 
 const VARIANTS = {
@@ -25,7 +25,7 @@ const VARIANTS = {
 	addImage: classes.addImage,
 }
 
-export type IconButtonProps = h.JSX.HTMLAttributes<HTMLButtonElement> & {
+export type IconButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	variant?: keyof typeof VARIANTS
 	disabled?: boolean
 	open?: boolean
@@ -36,11 +36,11 @@ export const IconButton = ({
 	variant,
 	open,
 	disabled,
-	class: className,
+	className,
 	...props
 }: IconButtonProps) => (
 	<button
-		class={cn(
+		className={cn(
 			classes.icon,
 			variant && VARIANTS[variant],
 			open && classes.open,

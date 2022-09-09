@@ -1,9 +1,9 @@
-import { h } from 'preact'
 import cn from 'classnames'
 import classes from './user-info.module.css'
 import defaultAvatar from './default-avatar.jpg'
+import { HTMLAttributes } from 'react'
 
-export type UserInfoProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
+export type UserInfoProps = HTMLAttributes<HTMLDivElement> & {
 	name: string
 	reputation: number
 	myself?: boolean
@@ -12,7 +12,7 @@ export type UserInfoProps = h.JSX.HTMLAttributes<HTMLDivElement> & {
 }
 
 export const UserInfo = ({
-	class: className,
+	className,
 	name,
 	reputation,
 	myself,
@@ -21,7 +21,7 @@ export const UserInfo = ({
 	...props
 }: UserInfoProps) => (
 	<div
-		class={cn(
+		className={cn(
 			classes.requesterInfo,
 			detail && classes.detail,
 			myself && classes.myRequest,
@@ -31,7 +31,7 @@ export const UserInfo = ({
 	>
 		<img src={avatar ?? defaultAvatar} />
 		<span>{name}</span>
-		<span class={cn(classes.dot, myself && classes.myDot)} />
+		<span className={cn(classes.dot, myself && classes.myDot)} />
 		<span>{reputation} SWR</span>
 	</div>
 )

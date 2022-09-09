@@ -1,8 +1,7 @@
-import { h } from 'preact'
 import { ConfirmModal } from './confirm-modal'
 
 // Types
-import type { Meta, Story } from '@storybook/preact'
+import type { Meta, Story } from '@storybook/react'
 
 export default {
 	title: 'Components/ConfirmModal',

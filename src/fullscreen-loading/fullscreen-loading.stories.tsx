@@ -1,6 +1,5 @@
-import { h } from 'preact'
 import { FullscreenLoading } from './fullscreen-loading'
-import type { Meta, Story } from '@storybook/preact'
+import type { Meta, Story } from '@storybook/react'
 
 export default {
 	title: 'Components/FullscreenLoading',
