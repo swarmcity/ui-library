@@ -1,11 +1,11 @@
-import preact from '@preact/preset-vite'
+import react from '@vitejs/plugin-react'
 import path from 'node:path'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
 export default defineConfig({
 	plugins: [
-		preact(),
+		react(),
 		dts({
 			insertTypesEntry: true,
 		}),
@@ -24,10 +24,10 @@ export default defineConfig({
 			fileName: (format) => `ui-library.${format}.js`,
 		},
 		rollupOptions: {
-			external: ['preact'],
+			external: ['react'],
 			output: {
 				globals: {
-					preact: 'preact',
+					react: 'react',
 				},
 			},
 		},

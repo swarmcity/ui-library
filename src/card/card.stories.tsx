@@ -1,6 +1,5 @@
-import { h } from 'preact'
 import { Card } from './card'
-import type { Meta, Story } from '@storybook/preact'
+import type { Meta, Story } from '@storybook/react'
 
 export default {
 	title: 'Components/Card',

@@ -4,7 +4,7 @@ import { dset } from 'dset'
 import type { StorybookViteConfig } from '@storybook/builder-vite'
 
 const config: StorybookViteConfig = {
-	framework: '@storybook/preact',
+	framework: '@storybook/react',
 	stories: ['../src/**/*.stories.@(ts|tsx)'],
 	addons: [
 		'@storybook/addon-a11y',
