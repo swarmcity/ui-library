@@ -18,6 +18,7 @@ export const UserInfo = ({
 	myself,
 	avatar,
 	detail,
+	...props
 }: UserInfoProps) => (
 	<div
 		class={cn(
@@ -26,6 +27,7 @@ export const UserInfo = ({
 			myself && classes.myRequest,
 			className
 		)}
+		{...props}
 	>
 		<img src={avatar ?? defaultAvatar} />
 		<span>{name}</span>
