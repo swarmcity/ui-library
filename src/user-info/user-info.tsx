@@ -18,7 +18,7 @@ export const UserInfo = ({
 	myself,
 	avatar,
 	detail,
-	...props,
+	...props
 }: UserInfoProps) => (
 	<div
 		class={cn(
