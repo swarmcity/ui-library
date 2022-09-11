@@ -3,10 +3,7 @@ import classes from './marketplace-item.module.css'
 import { HTMLAttributes } from 'react'
 import { IconButton } from '../icon-button/icon-button'
 
-export type MarketplaceItemProps = Pick<
-	HTMLAttributes<HTMLDivElement>,
-	'className'
-> & {
+export interface MarketplaceItemProps extends HTMLAttributes<HTMLDivElement> {
 	title: string
 	completedDeals: number
 }

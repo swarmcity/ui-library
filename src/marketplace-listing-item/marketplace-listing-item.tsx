@@ -4,10 +4,8 @@ import classes from './marketplace-listing-item.module.css'
 import { formatDate } from '../utils'
 import { HTMLAttributes } from 'react'
 
-export type MarketplaceListingItemProps = Pick<
-	HTMLAttributes<HTMLDivElement>,
-	'className'
-> & {
+export interface MarketplaceListingItemProps
+	extends HTMLAttributes<HTMLDivElement> {
 	title: string
 	repliesCount: number
 	date: Date
