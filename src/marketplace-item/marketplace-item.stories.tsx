@@ -2,37 +2,18 @@ import type { Meta, Story } from '@storybook/react'
 import { MarketplaceItem, MarketplaceItemProps } from './marketplace-item'
 
 export default {
-	title: 'Components/Marketplace List Item',
+	title: 'Components/Marketplace Item',
 	component: MarketplaceItem,
 	argTypes: {
 		title: {
 			name: 'Title',
 			type: { name: 'string', required: true },
-			defaultValue: 'Translate my 1 page manifesto from ENG to NL?',
+			defaultValue: 'Settler',
 		},
-		repliesCount: {
-			name: 'Replies Amount',
+		completedDeals: {
+			name: 'Completed Deals Count',
 			type: { name: 'number', required: true },
-			defaultValue: 1,
-		},
-		date: {
-			name: 'Date',
-			type: { name: 'date', required: true },
-			defaultValue: new Date(),
-			default: new Date(),
-		},
-		amount: {
-			name: 'Amount',
-			type: { name: 'number', required: true },
-			defaultValue: 33,
-		},
-		user: {
-			control: 'object',
-			defaultValue: {
-				name: 'Frank',
-				reputation: 1,
-				myself: false,
-			},
+			defaultValue: 761,
 		},
 	},
 } as Meta<typeof MarketplaceItem>

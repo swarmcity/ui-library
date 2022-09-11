@@ -1,41 +1,30 @@
 import cn from 'classnames'
-import { UserInfo, UserInfoProps } from '../user-info/user-info'
 import classes from './marketplace-item.module.css'
-import { formatDate } from '../utils'
 import { HTMLAttributes } from 'react'
+import { IconButton } from '../icon-button/icon-button'
 
 export type MarketplaceItemProps = Pick<
 	HTMLAttributes<HTMLDivElement>,
 	'className'
 > & {
 	title: string
-	repliesCount: number
-	date: Date
-	amount: number
-	user: UserInfoProps
+	completedDeals: number
 }
 export const MarketplaceItem = ({
 	className,
 	title,
-	repliesCount,
-	date,
-	amount,
-	user,
+	completedDeals,
+	...props
 }: MarketplaceItemProps) => (
-	<div className={cn(classes.request, className)}>
-		<div className={classes.titleRow}>
-			<p className={classes.title}>{title}</p>
-			<div className={classes.replies}>
-				<span>{repliesCount}</span>
+	<div className={cn(classes.root, className)} {...props}>
+		<div className={classes.wrapper}>
+			<div className={classes.wrapperTitle}>
+				<h2 className={classes.title}>{title}</h2>
+				<IconButton variant="select" />
 			</div>
-		</div>
-		<div className={classes.date}>{formatDate(date)}</div>
-		<div className={classes.requesterRow}>
-			<UserInfo {...user} />
-			<div className={classes.requestAmt}>
-				<div className={classes.dai}>DAI</div>
-				<div className={classes.amt}>{amount}</div>
-			</div>
+			<p className={classes.subtitle}>
+				{completedDeals.toFixed()} deals completed
+			</p>
 		</div>
 	</div>
 )
