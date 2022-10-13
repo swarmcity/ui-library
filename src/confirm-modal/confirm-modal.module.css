@@ -8,7 +8,7 @@
 	left: 0;
 	right: 0;
 	z-index: 100;
-	color: #fafafa;
+	color: var(--white);
 	padding: 75px 0;
 	text-align: center;
 
@@ -22,16 +22,16 @@
 }
 
 .confirm-modal.action {
-	background-color: var(--action-bg-color);
-	color: var(--action-text-color);
+	background-color: var(--blue);
+	color: var(--white);
 }
 
 .confirm-modal.danger {
-	background-color: var(--danger-bg-color);
-	color: var(--danger-text-color);
+	background-color: var(--red);
+	color: var(--white);
 }
 
 .confirm-modal.deal {
-	background-color: var(--deal-bg-color);
-	color: var(--deal-text-color);
+	background-color: var(--green);
+	color: var(--white);
 }
