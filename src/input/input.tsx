@@ -1,9 +1,12 @@
-import { HTMLAttributes } from 'react'
+import { DetailedHTMLProps, InputHTMLAttributes } from 'react'
 
 // Style
 import classes from './input.module.css'
 
-export type InputProps = HTMLAttributes<HTMLInputElement> & {
+export type InputProps = DetailedHTMLProps<
+	InputHTMLAttributes<HTMLInputElement>,
+	HTMLInputElement
+> & {
 	id: string
 }
 
