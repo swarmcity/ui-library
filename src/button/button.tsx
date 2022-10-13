@@ -2,11 +2,12 @@ import cn from 'classnames'
 import { ButtonHTMLAttributes } from 'react'
 import classes from './button.module.css'
 
-const VARIANTS = {
-	danger: classes.danger,
-	deal: classes.deal,
-	default: classes.default,
-	action: classes.action,
+const COLORS = {
+	blue: classes.blue,
+	'blue-light': classes.bluelight,
+	green: classes.green,
+	red: classes.red,
+	'yellow-light': classes.yellowlight,
 }
 
 const SIZE = {
@@ -14,14 +15,15 @@ const SIZE = {
 }
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-	variant?: keyof typeof VARIANTS
+	color?: keyof typeof COLORS
+
 	bg?: boolean
 	size?: keyof typeof SIZE
 	disabled?: boolean
 }
 
 export const Button = ({
-	variant,
+	color,
 	bg,
 	size,
 	disabled,
@@ -31,7 +33,7 @@ export const Button = ({
 	<button
 		className={cn(
 			classes.button,
-			variant && VARIANTS[variant],
+			color && COLORS[color],
 			bg && classes.bg,
 			size && SIZE[size],
 			disabled && classes.disabled,

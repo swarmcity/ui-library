@@ -1,16 +1,24 @@
 :root {
-	--danger-bg-color: #f55858;
-	--danger-text-color: #fafafa;
+	--yellow: #efd96f;
+	--yellow-light: #eee191;
 
-	--action-bg-color: #24b1ff;
-	--action-text-color: #fafafa;
+	--blue: #24b1ff;
+	--blue-light: #4cbffe;
 
-	--deal-bg-color: #6ad792;
-	--deal-text-color: #fafafa;
+	--green: #6ad792;
+	--green-text: #23b460;
+	--green-button: #88dea8;
 
-	--loading-bg-color: var(--deal-bg-color);
+	--red: #f55858;
+	--red-text: #d0021b;
 
-	--secondary-color-3: #666666;
-	--secondary-color-4: #333333;
-	--base: #fafafa;
+	--white: #fafafa;
+	--grey1: #f2f2f2;
+	--grey2: #bfbfbf;
+	--grey2-lines: #dfdfdf;
+	--grey2-light-text: #acacac;
+	--grey3: #666666;
+	--grey4: #333333;
+	--grey5: #191919;
+	--grey-button: #fbfbfb;
 }

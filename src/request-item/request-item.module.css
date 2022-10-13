@@ -14,7 +14,7 @@
 
 		& .title {
 			flex-basis: 75%;
-			color: var(--secondary-color-4);
+			color: var(--grey4);
 			font-size: 18px;
 			font-weight: 200;
 			line-height: 24px;
@@ -23,7 +23,7 @@
 		}
 
 		& .replies {
-			color: var(--secondary-color-4);
+			color: var(--grey4);
 			position: relative;
 			padding-right: 15px;
 			font-size: 12px;
@@ -39,7 +39,7 @@
 				mask-size: 20px;
 				mask-position: 50% 50%;
 				mask-repeat: no-repeat;
-				background-color: var(--secondary-color-4);
+				background-color: var(--grey4);
 				width: 20px;
 				height: 20px;
 				right: -4px;

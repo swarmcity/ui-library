@@ -21,7 +21,7 @@ button.icon {
 		mask-size: 50px;
 		mask-position: 50% 50%;
 		mask-repeat: no-repeat;
-		background-color: var(--secondary-color-3);
+		background-color: var(--grey3);
 		width: 100%;
 		height: 100%;
 		top: 50%;
@@ -41,29 +41,29 @@ button.icon {
 
 	&.close::before {
 		mask-image: url('./images/icon-close.svg');
-		background-color: var(--secondary-color-3);
+		background-color: var(--grey3);
 	}
 
 	&.cancelCreation::before {
 		mask-image: url('./images/icon-cancel.svg');
-		background-color: var(--base);
+		background-color: var(--white);
 	}
 
 	&.cancel::before {
 		mask-image: url('./images/icon-cancel.svg');
-		background-color: var(--secondary-color-4);
+		background-color: var(--grey4);
 	}
 
 	&.rotateImg::before {
 		mask-image: url('./images/icon-rotate.svg');
 		mask-size: 36px;
-		background-color: var(--action-bg-color);
+		background-color: var(--blue);
 	}
 
 	&.exit::before {
 		mask-image: url('./images/icon-logout.svg');
 		mask-size: 36px;
-		background-color: var(--secondary-color-3);
+		background-color: var(--grey3);
 
 		@media (min-width: 992px) {
 			mask-size: 50px;
@@ -73,7 +73,7 @@ button.icon {
 	&.back::before {
 		mask-image: url('./images/icon-back.svg');
 		mask-size: 36px;
-		background-color: var(--secondary-color-3);
+		background-color: var(--grey3);
 
 		@media (min-width: 992px) {
 			mask-size: 50px;
@@ -87,7 +87,7 @@ button.icon {
 		&::before {
 			mask-image: url('./images/icon-next.svg');
 			mask-size: 36px;
-			background-color: var(--secondary-color-4);
+			background-color: var(--grey4);
 		}
 	}
 
@@ -116,13 +116,13 @@ button.icon {
 	&.upload,
 	&.counter,
 	&.addImage {
-		background-color: var(--base);
+		background-color: var(--white);
 		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 	}
 
 	&.conflictNext::before {
 		mask-image: url('./images/icon-next.svg');
-		background-color: var(--action-bg-color);
+		background-color: var(--blue);
 	}
 
 	&.requestNext {
@@ -130,23 +130,23 @@ button.icon {
 
 		&::before {
 			mask-image: url('./images/icon-next.svg');
-			background-color: var(--base);
+			background-color: var(--white);
 		}
 	}
 
 	&.errorNext::before {
 		mask-image: url('./images/icon-next.svg');
-		background-color: var(--danger-bg-color);
+		background-color: var(--red);
 	}
 
 	&.confirmAction::before {
 		mask-image: url('./images/icon-confirm.svg');
-		background-color: var(--action-bg-color);
+		background-color: var(--blue);
 	}
 
 	&.confirmDanger::before {
 		mask-image: url('./images/icon-confirm.svg');
-		background-color: var(--danger-bg-color);
+		background-color: var(--red);
 	}
 
 	&.confirmSend {
@@ -156,7 +156,7 @@ button.icon {
 		&::before {
 			mask-image: url('./images/icon-confirm.svg');
 			mask-size: 38px !important;
-			background-color: var(--secondary-color-4);
+			background-color: var(--grey4);
 		}
 	}
 
@@ -166,7 +166,7 @@ button.icon {
 
 		&::before {
 			mask-image: url('./images/icon-next.svg');
-			background-color: var(--action-bg-color);
+			background-color: var(--blue);
 		}
 	}
 
@@ -176,23 +176,23 @@ button.icon {
 
 		&::before {
 			mask-image: url('./images/icon-next.svg');
-			background-color: var(--action-bg-color);
+			background-color: var(--blue);
 		}
 	}
 
 	&.requestStart::before {
 		mask-image: url('./images/icon-new.svg');
-		background-color: var(--action-bg-color);
+		background-color: var(--blue);
 	}
 
 	&.reply::before {
 		mask-image: url('./images/icon-reply.svg');
-		background-color: var(--action-bg-color);
+		background-color: var(--blue);
 	}
 
 	&.chat::before {
 		mask-image: url('./images/icon-chat.svg');
-		background-color: var(--action-bg-color);
+		background-color: var(--blue);
 	}
 
 	&.requestStart,
@@ -210,8 +210,8 @@ button.icon {
 		width: 20px;
 		height: 20px;
 		font-size: 10px;
-		background-color: var(--secondary-color-4);
-		color: var(--base);
+		background-color: var(--grey4);
+		color: var(--white);
 
 		&::before {
 			content: none;
@@ -230,7 +230,7 @@ button.icon {
 
 		&::before {
 			mask-image: url('./images/icon-new.svg');
-			background-color: var(--base);
+			background-color: var(--white);
 			mask-size: 100%;
 		}
 	}
@@ -243,7 +243,7 @@ button.icon {
 		&::before {
 			mask-image: url('./images/icon-upload.svg');
 			mask-size: 23px;
-			background-color: var(--base);
+			background-color: var(--white);
 		}
 	}
 }

@@ -10,10 +10,17 @@ export default {
 			control: 'boolean',
 			default: false,
 		},
-		variant: {
-			name: 'Variant',
+		color: {
+			name: 'Color',
 			control: 'select',
-			options: ['default', 'action', 'danger', 'deal'],
+			options: [
+				'default',
+				'blue',
+				'blue-light',
+				'green',
+				'red',
+				'yellow-light',
+			],
 			default: 'default',
 		},
 		size: {

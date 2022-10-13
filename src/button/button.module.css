@@ -1,8 +1,9 @@
 @import '../fonts.css';
+@import '../vars.css';
 
 button.button {
 	font-family: 'Montserrat';
-	background: #fafafa;
+	background: var(--white);
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
 	border-radius: 2px;
 	padding: 18px 24px;
@@ -10,44 +11,63 @@ button.button {
 	line-height: 15px;
 	font-weight: 700;
 	text-align: center;
-	color: #333;
+	color: var(--grey4);
 	border: 0;
 	min-width: 169px;
 	pointer-events: all;
 	cursor: pointer;
 
-	&.action {
-		color: #24b1ff;
+	&.blue {
+		color: var(--blue);
 		&.bg {
-			background: #24b1ff;
+			background: var(--blue);
 		}
 	}
 
-	&.danger {
-		color: #d0021b;
+	&.bluelight {
+		color: var(--blue-light);
 		&.bg {
-			background: #d0021b;
+			background: var(--blue-light);
 		}
 	}
 
-	&.deal {
-		color: #7ad69c;
+	&.green {
+		color: var(--green);
 		&.bg {
-			background: #7ad69c;
+			background: var(--green);
+		}
+	}
+
+	&.red {
+		color: var(--red);
+		&.bg {
+			background: var(--red);
+		}
+	}
+
+	&.yellowlight {
+		color: var(--yellow-light);
+		&.bg {
+			background: var(--yellow-light);
 		}
 	}
 
 	&.bg {
-		&.action,
-		&.danger,
-		&.deal {
-			color: #fafafa;
+		&.blue,
+		&.bluelight,
+		&.green,
+		&.red {
+			color: var(--white);
+		}
+
+		&.yellowlight {
+			color: var(--grey4);
 		}
 	}
 
 	&.disabled {
-		background: #f2f2f2 !important;
-		color: #cccccc !important;
+		background: var(--grey1) !important;
+		color: var(--grey2-light-text) !important;
 		pointer-events: none;
 	}
 

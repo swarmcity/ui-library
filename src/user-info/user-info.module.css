@@ -19,14 +19,14 @@
 		width: 4px;
 		height: 4px;
 		margin: 2px 3px;
-		background: var(--action-bg-color);
+		background: var(--blue);
 	}
 
 	&.myRequest {
-		color: var(--secondary-color-4);
+		color: var(--grey4);
 
 		& .dot {
-			background: var(--secondary-color-4);
+			background: var(--grey4);
 		}
 	}
 	&.detail {
