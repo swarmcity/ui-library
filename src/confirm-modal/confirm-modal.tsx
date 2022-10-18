@@ -13,16 +13,20 @@ import classes from './confirm-modal.module.css'
 export type ConfirmModalProps = {
 	cancel?: IconButtonProps
 	confirm?: IconButtonProps
-	variant?: 'action' | 'danger'
+	variant?: 'action' | 'danger' | 'success'
 	children: ReactNode
 }
 
 const CONFIRM_VARIANTS: Record<
 	NonNullable<ConfirmModalProps['variant']>,
-	Extract<IconButtonProps['variant'], 'confirmAction' | 'confirmDanger'>
+	Extract<
+		IconButtonProps['variant'],
+		'confirmAction' | 'confirmDanger' | 'confirmSend'
+	>
 > = {
 	action: 'confirmAction',
 	danger: 'confirmDanger',
+	success: 'confirmSend',
 }
 
 export const ConfirmModal = ({
