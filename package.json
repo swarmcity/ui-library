@@ -6,8 +6,8 @@
 		"prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
-		"lint": "eslint . --ext .ts,.tsx",
-		"prettier:check": "prettier -c ."
+		"lint": "eslint . --ext .ts,.tsx && prettier -c .",
+		"lint:fix": "eslint . --ext .ts,.tsx  --fix && prettier -w ."
 	},
 	"devDependencies": {
 		"@babel/preset-env": "^7.19.4",
