@@ -19,6 +19,7 @@ button.button {
 
 	&.blue {
 		color: var(--blue);
+
 		&.bg {
 			background: var(--blue);
 		}
@@ -26,6 +27,7 @@ button.button {
 
 	&.bluelight {
 		color: var(--blue-light);
+
 		&.bg {
 			background: var(--blue-light);
 		}
@@ -33,13 +35,23 @@ button.button {
 
 	&.green {
 		color: var(--green);
+
 		&.bg {
 			background: var(--green);
 		}
 	}
 
+	&.greenlight {
+		color: var(--green-light);
+
+		&.bg {
+			background: var(--green-light);
+		}
+	}
+
 	&.red {
 		color: var(--red);
+
 		&.bg {
 			background: var(--red);
 		}
@@ -47,6 +59,7 @@ button.button {
 
 	&.yellowlight {
 		color: var(--yellow-light);
+
 		&.bg {
 			background: var(--yellow-light);
 		}
@@ -56,6 +69,7 @@ button.button {
 		&.blue,
 		&.bluelight,
 		&.green,
+		&.greenlight,
 		&.red {
 			color: var(--white);
 		}

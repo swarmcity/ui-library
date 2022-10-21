@@ -18,6 +18,7 @@ export default {
 				'blue',
 				'blue-light',
 				'green',
+				'green-light',
 				'red',
 				'yellow-light',
 			],
