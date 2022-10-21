@@ -6,6 +6,7 @@ const COLORS = {
 	blue: classes.blue,
 	'blue-light': classes.bluelight,
 	green: classes.green,
+	'green-light': classes.greenlight,
 	red: classes.red,
 	'yellow-light': classes.yellowlight,
 }
