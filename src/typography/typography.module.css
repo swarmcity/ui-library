@@ -1,0 +1,149 @@
+@import '../fonts.css';
+@import '../vars.css';
+
+.typography {
+	font-family: Montserrat;
+	font-style: normal;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+	color: var(--grey3);
+	font-size: 16pt;
+	font-weight: 300;
+
+	&.header56 {
+		font-weight: 700;
+		font-size: 56pt;
+	}
+
+	&.header44 {
+		font-weight: 700;
+		font-size: 44pt;
+	}
+
+	&.header35 {
+		font-weight: 700;
+		font-size: 35pt;
+	}
+
+	&.header30 {
+		font-weight: 700;
+		font-size: 30pt;
+	}
+
+	&.header28 {
+		font-weight: 700;
+		font-size: 28pt;
+	}
+
+	&.header26 {
+		font-weight: 700;
+		font-size: 26pt;
+	}
+
+	&.header24 {
+		font-weight: 700;
+		font-size: 24pt;
+	}
+
+	&.header22 {
+		font-weight: 700;
+		font-size: 22pt;
+	}
+
+	&.bodyextralight20 {
+		font-weight: 200;
+		font-size: 20pt;
+	}
+
+	&.bodyextralight18 {
+		font-weight: 200;
+		font-size: 18pt;
+	}
+
+	&.bodybold16 {
+		font-weight: 700;
+		font-size: 16pt;
+	}
+
+	&.bodylight16 {
+		font-weight: 300;
+		font-size: 16pt;
+	}
+
+	&.smallbold12 {
+		font-weight: 700;
+		font-size: 12pt;
+	}
+
+	&.smalllight12 {
+		font-weight: 300;
+		font-size: 12pt;
+	}
+
+	&.smallbold10 {
+		font-weight: 700;
+		font-size: 10pt;
+	}
+
+	&.smalllight10 {
+		font-weight: 300;
+		font-size: 10pt;
+	}
+
+	&.blue {
+		color: var(--blue);
+	}
+
+	&.green {
+		color: var(--green);
+	}
+
+	&.greentext {
+		color: var(--green-text);
+	}
+
+	&.grey1 {
+		color: var(--grey1);
+	}
+
+	&.grey2 {
+		color: var(--grey2);
+	}
+
+	&.greylines {
+		color: var(--grey2-lines);
+	}
+
+	&.greylighttext {
+		color: var(--grey2-light-text);
+	}
+
+	&.grey3 {
+		color: var(--grey3);
+	}
+
+	&.grey4 {
+		color: var(--grey4);
+	}
+
+	&.grey5 {
+		color: var(--grey5);
+	}
+
+	&.red {
+		color: var(--red);
+	}
+
+	&.redtext {
+		color: var(--red-text);
+	}
+
+	&.white {
+		color: var(--white);
+	}
+
+	&.yellow {
+		color: var(--yellow);
+	}
+}
