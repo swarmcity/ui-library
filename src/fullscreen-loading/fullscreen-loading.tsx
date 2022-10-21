@@ -1,5 +1,6 @@
 // Types
 import type { ReactNode } from 'react'
+import { Typography } from '../typography/typography'
 
 // Style
 import classes from './fullscreen-loading.module.css'
@@ -11,9 +12,9 @@ export type FullscreenLoadingProps = {
 export const FullscreenLoading = ({ children }: FullscreenLoadingProps) => {
 	return (
 		<div className={classes.fullscreenLoading}>
-			<header>
-				{children || <h1 style={{ color: '#fafafa' }}>Loading...</h1>}
-			</header>
+			<Typography variant="header-35" color="white">
+				{children || 'Loading...'}
+			</Typography>
 			<div className={classes.loading}>
 				<div />
 				<div />

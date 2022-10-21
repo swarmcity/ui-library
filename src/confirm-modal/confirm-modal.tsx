@@ -9,24 +9,21 @@ import type { ReactNode } from 'react'
 
 // Style
 import classes from './confirm-modal.module.css'
+import { Typography } from '../typography/typography'
 
 export type ConfirmModalProps = {
 	cancel?: IconButtonProps
 	confirm?: IconButtonProps
-	variant?: 'action' | 'danger' | 'success'
+	variant?: 'action' | 'danger'
 	children: ReactNode
 }
 
 const CONFIRM_VARIANTS: Record<
 	NonNullable<ConfirmModalProps['variant']>,
-	Extract<
-		IconButtonProps['variant'],
-		'confirmAction' | 'confirmDanger' | 'confirmSend'
-	>
+	Extract<IconButtonProps['variant'], 'confirmAction' | 'confirmDanger'>
 > = {
 	action: 'confirmAction',
 	danger: 'confirmDanger',
-	success: 'confirmSend',
 }
 
 export const ConfirmModal = ({
@@ -37,7 +34,9 @@ export const ConfirmModal = ({
 }: ConfirmModalProps) => {
 	return (
 		<div className={cn(classes.confirmModal, classes[variant])}>
-			<header>{children}</header>
+			<Typography className={classes.title} variant="header-35" color="white">
+				{children}
+			</Typography>
 			<div className="buttons">
 				{cancel && <IconButton variant="close" {...cancel} />}
 				{confirm && (
