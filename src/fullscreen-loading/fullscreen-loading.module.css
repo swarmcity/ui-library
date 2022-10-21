@@ -10,20 +10,19 @@
 	left: 0;
 	right: 0;
 	z-index: 100;
-	color: #fafafa;
-	padding: 75px 0;
 	background-color: var(--green);
-}
-
-.fullscreen-loading header {
-	padding: 50px 0;
-	text-align: center;
+	padding: 50px;
+	padding-top: 170px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 .loading {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-top: 20px;
 }
 
 .loading > div {

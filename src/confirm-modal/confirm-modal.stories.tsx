@@ -18,8 +18,8 @@ export default {
 		variant: {
 			name: 'Variant',
 			control: 'select',
-			options: ['default', 'action', 'danger', 'success'],
-			default: 'default',
+			options: [undefined, 'action', 'danger'],
+			default: undefined,
 		},
 		children: {
 			name: 'Header content',
