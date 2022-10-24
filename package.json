@@ -1,6 +1,6 @@
 {
 	"name": "@swarm-city/ui-library",
-	"version": "0.6.1",
+	"version": "0.6.2",
 	"scripts": {
 		"build": "vite build",
 		"prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
