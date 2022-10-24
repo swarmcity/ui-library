@@ -34,7 +34,7 @@ export const ConfirmModal = ({
 	return (
 		<div className={cn(classes.confirmModal, classes[variant])}>
 			{children}
-			<div className="buttons">
+			<div className={classes.buttons}>
 				{cancel && <IconButton variant="close" {...cancel} />}
 				{confirm && (
 					<IconButton variant={CONFIRM_VARIANTS[variant]} {...confirm} />
