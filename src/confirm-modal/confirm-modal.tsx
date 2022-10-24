@@ -9,7 +9,6 @@ import type { ReactNode } from 'react'
 
 // Style
 import classes from './confirm-modal.module.css'
-import { Typography } from '../typography/typography'
 
 export type ConfirmModalProps = {
 	cancel?: IconButtonProps
@@ -34,9 +33,7 @@ export const ConfirmModal = ({
 }: ConfirmModalProps) => {
 	return (
 		<div className={cn(classes.confirmModal, classes[variant])}>
-			<Typography className={classes.title} variant="header-35" color="white">
-				{children}
-			</Typography>
+			{children}
 			<div className="buttons">
 				{cancel && <IconButton variant="close" {...cancel} />}
 				{confirm && (

@@ -1,3 +1,6 @@
+// Utils
+export { formatDate } from './utils'
+
 // Components
 export { Button } from './button/button'
 export { Card } from './card/card'
@@ -9,6 +12,7 @@ export { MarketplaceItem } from './marketplace-item/marketplace-item'
 export { MarketplaceListingItem } from './marketplace-listing-item/marketplace-listing-item'
 export { Reply } from './reply/reply'
 export { RequestItem } from './request-item/request-item'
+export { Typography } from './typography/typography'
 export { UserInfo } from './user-info/user-info'
 
 // Types
@@ -22,4 +26,5 @@ export type { MarketplaceItemProps } from './marketplace-item/marketplace-item'
 export type { MarketplaceListingItemProps } from './marketplace-listing-item/marketplace-listing-item'
 export type { ReplyProps } from './reply/reply'
 export type { RequestItemProps } from './request-item/request-item'
+export type { TypographyProps } from './typography/typography'
 export type { UserInfoProps } from './user-info/user-info'
